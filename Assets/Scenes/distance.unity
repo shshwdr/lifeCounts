@@ -578,7 +578,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -804,6 +804,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1054124792 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 647955501256251412, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
+  m_PrefabInstance: {fileID: 2113049115}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1054124805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054124792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8261e6249b6538646b4f557e255b9d1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  clickForce: 300
 --- !u!1 &1102195465
 GameObject:
   m_ObjectHideFlags: 0
@@ -986,7 +1005,7 @@ MonoBehaviour:
   m_Follow: {fileID: 2106498425}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 5
+    OrthographicSize: 6
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -1254,6 +1273,18 @@ PrefabInstance:
     - target: {fileID: 647955501256251418, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 647955501256251419, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 647955501256251419, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
+      propertyPath: m_Color.g
+      value: 0.9827226
+      objectReference: {fileID: 0}
+    - target: {fileID: 647955501256251419, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 707497503372105778, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
       propertyPath: m_Enabled

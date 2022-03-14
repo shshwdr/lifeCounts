@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class NPC : MonoBehaviour
 {
+    public bool isLinked = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,13 +17,18 @@ public class NPC : MonoBehaviour
         
     }
 
-    public void link(string t)
+    public void link()
     {
+        isLinked = true;
         Debug.Log("link");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (isLinked)
+        {
+            return;
+        }
         if (collision.GetComponent<Rigidbody2D>())
         {
             if(GameManager.Instance.linkType == LinkType.distance)
@@ -43,7 +49,8 @@ public class NPC : MonoBehaviour
 
                 Destroy(GetComponent<PixelCrushers.DialogueSystem.DialogueSystemTrigger>());
             }
-            Destroy(this);
+            link();
+            //Destroy(this);
         }
     }
 }
