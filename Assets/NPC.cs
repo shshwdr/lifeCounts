@@ -20,8 +20,18 @@ public class NPC : MonoBehaviour
     {
         if (collision.GetComponent<Rigidbody2D>())
         {
-            GetComponent<SpringJoint2D>().enabled = true;
-            GetComponent<SpringJoint2D>().connectedBody = collision.GetComponent<Rigidbody2D>();
+            if(GameManager.Instance.linkType == LinkType.distance)
+            {
+                GetComponent<DistanceJoint2D>().enabled = true;
+                GetComponent<DistanceJoint2D>().connectedBody = collision.GetComponent<Rigidbody2D>();
+
+            }
+            else
+            {
+
+                GetComponent<SpringJoint2D>().enabled = true;
+                GetComponent<SpringJoint2D>().connectedBody = collision.GetComponent<Rigidbody2D>();
+            }
             Destroy(this);
         }
     }
