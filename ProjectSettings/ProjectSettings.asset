@@ -559,7 +559,10 @@ PlayerSettings:
   webGLLinkerTarget: 1
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    1: USE_PHYSICS2D;USE_CINEMACHINE
+    7: USE_PHYSICS2D;USE_CINEMACHINE
+    13: USE_PHYSICS2D;USE_CINEMACHINE
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}

@@ -16,6 +16,11 @@ public class NPC : MonoBehaviour
         
     }
 
+    public void link(string t)
+    {
+        Debug.Log("link");
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.GetComponent<Rigidbody2D>())
@@ -31,6 +36,12 @@ public class NPC : MonoBehaviour
 
                 GetComponent<SpringJoint2D>().enabled = true;
                 GetComponent<SpringJoint2D>().connectedBody = collision.GetComponent<Rigidbody2D>();
+            }
+
+            if (GetComponent<PixelCrushers.DialogueSystem.DialogueSystemTrigger>())
+            {
+
+                Destroy(GetComponent<PixelCrushers.DialogueSystem.DialogueSystemTrigger>());
             }
             Destroy(this);
         }
