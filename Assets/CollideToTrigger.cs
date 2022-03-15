@@ -7,10 +7,19 @@ public class CollideToTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        foreach(Trigger trigger in GetComponents<Trigger>())
+        if (collision.GetComponent<PlayerController>())
         {
-            trigger.trigger();
+
+            foreach (Trigger trigger in GetComponents<Trigger>())
+            {
+                trigger.trigger();
+            }
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        OnTriggerEnter2D(collision.collider);
     }
     // Start is called before the first frame update
     void Start()
