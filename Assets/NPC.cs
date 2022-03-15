@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,10 +6,11 @@ using UnityEngine;
 public class NPC : MonoBehaviour
 {
     public bool isLinked = false;
+    CinemachineTargetGroup targetGroup;
     // Start is called before the first frame update
     void Start()
     {
-        
+        targetGroup = GameObject.Find("targetGroup").GetComponent<CinemachineTargetGroup>();
     }
 
     // Update is called once per frame
@@ -20,6 +22,20 @@ public class NPC : MonoBehaviour
     public void link()
     {
         isLinked = true;
+        bool found = false;
+        for(int i = 0;i< targetGroup.m_Targets.Length; i++)
+        {
+            if(targetGroup.m_Targets[i].target == null)
+            {
+                targetGroup.m_Targets[i].target = transform;
+                found = true;
+                break;
+            }
+        }
+        if (!found)
+        {
+            Debug.LogWarning("camera not removed");
+        }
         Debug.Log("link");
     }
 
