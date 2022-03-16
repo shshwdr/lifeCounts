@@ -7,6 +7,10 @@ public class TriggerToPassLevel : Trigger
     public override void trigger()
     {
         base.trigger();
+
+
+
+
         RewardView view =  GameObject.FindObjectOfType<RewardView>(true);
         view.showReward();
         

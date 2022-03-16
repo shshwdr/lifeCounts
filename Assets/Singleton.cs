@@ -11,7 +11,7 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     private static object m_Lock = new object();
     private static T m_Instance;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         if (Instance != this) Destroy(gameObject);
         DontDestroyOnLoad(gameObject);

@@ -7,6 +7,7 @@ public class NPC : MonoBehaviour
 {
     public bool isLinked = false;
     CinemachineTargetGroup targetGroup;
+    public string animalType;
     // Start is called before the first frame update
     void Start()
     {

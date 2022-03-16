@@ -3,30 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class RewardView : MonoBehaviour
+public class LevelSelectionView : MonoBehaviour
 {
-
     public Button nextLevelButton;
     public Button returnButton;
     public Button levelSelectionButton;
     public Text levelText;
     public GameObject panel;
-
     public void showReward()
     {
         panel.SetActive(true);
-        StageLevelManager.Instance.addLevel();
-        if (StageLevelManager.Instance.hasNextLevel())
+        var levelButtons = GetComponentsInChildren<LevelSelectionCell>(); 
+        int i = 0;
+        for (; i <= StageLevelManager.Instance.maxUnlockedLevel;i++)
         {
-            nextLevelButton.gameObject.SetActive(true);
+            levelButtons[i].gameObject.SetActive(true);
+            levelButtons[i].init(StageLevelManager.Instance.levelInfoList[i]);
         }
-        else
+        for(;i< levelButtons.Length; i++)
         {
-            nextLevelButton.gameObject.SetActive(false);
-
+            levelButtons[i].gameObject.SetActive(false);
         }
-        levelText.text = $"You Win Level {StageLevelManager.Instance.currentLevel.displayName}";
-        GameManager.Instance.saveAnimalInLevel();
     }
     public void hideReward()
     {
@@ -38,12 +35,6 @@ public class RewardView : MonoBehaviour
     void Start()
     {
         nextLevelButton.onClick.AddListener(delegate { StageLevelManager.Instance.startNextLevel(); });
-        returnButton.onClick.AddListener(delegate { StageLevelManager.Instance.returnHome(); });
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        returnButton.onClick.AddListener(delegate { hideReward(); });
     }
 }

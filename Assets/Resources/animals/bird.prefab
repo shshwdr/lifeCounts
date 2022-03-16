@@ -1,16 +1,12 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &2674598066833162508
+--- !u!1001 &6070374117983657503
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 365633484265731075, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 365633484265731075, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: 1.05
@@ -19,9 +15,17 @@ PrefabInstance:
       propertyPath: m_ConnectedRigidBody
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 365633484265731075, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
+      propertyPath: m_AutoConfigureDistance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 365633484265731075, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
+      propertyPath: m_AutoConfigureConnectedAnchor
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 647955501256251412, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
       propertyPath: m_Name
-      value: normal
+      value: bird
       objectReference: {fileID: 0}
     - target: {fileID: 647955501256251412, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
       propertyPath: m_IsActive
@@ -33,7 +37,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 647955501256251418, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.96
+      value: -9.370001
       objectReference: {fileID: 0}
     - target: {fileID: 647955501256251418, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -74,38 +78,34 @@ PrefabInstance:
     - target: {fileID: 647955501256251419, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 4ff9293e7ac1d1548ac78cf8831e32a7, type: 3}
-    - target: {fileID: 707497503372105778, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
-      propertyPath: conversation
-      value: New Conversation 2
+      objectReference: {fileID: 21300000, guid: 9c9a66d91c068ca4080e49dde636116b, type: 3}
+    - target: {fileID: 647955501256251419, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 707497503372105778, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
-      propertyPath: conversationActor
-      value: 
+    - target: {fileID: 647955501256251419, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
+      propertyPath: m_Color.g
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 707497503372105778, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
-      propertyPath: condition.acceptedTags.Array.size
+    - target: {fileID: 647955501256251419, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
+      propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 707497503372105778, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
-      propertyPath: condition.acceptedTags.Array.data[0]
-      value: Player
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1544321813070108888, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
       propertyPath: m_Distance
       value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 1544321813070108888, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
-      propertyPath: m_EnableCollision
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1544321813070108888, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
       propertyPath: m_MaxDistanceOnly
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1544321813070108888, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
-      propertyPath: m_ConnectedRigidBody
-      value: 
+    - target: {fileID: 4207871266040400011, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
+      propertyPath: animalType
+      value: bird
       objectReference: {fileID: 0}
     - target: {fileID: 5785812302737228005, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
       propertyPath: m_AnchorMax.y
@@ -161,31 +161,50 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6004962119670790653, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6004962119670790653, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6004962119670790653, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6004962119670790653, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6004962119670790653, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 6004962119670790653, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -67
       objectReference: {fileID: 0}
     - target: {fileID: 8154105834660026677, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
       propertyPath: actor
-      value: NPC
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
+--- !u!1 &6683426515696715275 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 647955501256251412, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
+  m_PrefabInstance: {fileID: 6070374117983657503}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1054124805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6683426515696715275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8261e6249b6538646b4f557e255b9d1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  clickForce: 300

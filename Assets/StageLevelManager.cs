@@ -35,9 +35,20 @@ public class StageLevelManager : Singleton<StageLevelManager>
         maxUnlockedLevel = Mathf.Max(currentLevelId, maxUnlockedLevel);
     }
 
+    public void returnHome()
+    {
+
+        SceneManager.LoadScene("home");
+    }
+
+    public void startLevel(int id)
+    {
+        currentLevelId = id;
+        SceneManager.LoadScene(currentLevel.sceneName);
+    }
+
     public void startNextLevel()
     {
-        addLevel();
         SceneManager.LoadScene(currentLevel.sceneName);
     }
     private void Awake()
@@ -46,10 +57,10 @@ public class StageLevelManager : Singleton<StageLevelManager>
         int id = 0;
         foreach (var info in levelInfoList)
         {
-            if (info.isDeprecated == 1)
-            {
-                continue;
-            }
+            //if (info.isDeprecated == 1)
+            //{
+            //    continue;
+            //}
             info.id = id++;
             levelInfoByName[info.displayName] = info;
         }
