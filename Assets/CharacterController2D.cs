@@ -8,6 +8,7 @@ public class CharacterController2D : MonoBehaviour
 	[Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;  // How much to smooth out the movement
 	[SerializeField] private bool m_AirControl = false;                         // Whether or not a player can steer while jumping;
 	[SerializeField] private LayerMask m_WhatIsGround;                          // A mask determining what is ground to the character
+	[SerializeField] private LayerMask m_WhatIsJumpDir;                          // A mask determining what is ground to the character
 	[SerializeField] private LayerMask m_WhatIsFakeGround;                          // A mask determining what is ground to the character
 	[SerializeField] private Transform m_GroundCheck;                           // A position marking where to check if the player is grounded.
 	[SerializeField] private Transform m_CeilingCheck;                          // A position marking where to check for ceilings
@@ -34,31 +35,31 @@ public class CharacterController2D : MonoBehaviour
 	
 	public Vector2 jumpDir;
 
-    void OnCollisionEnter2D(Collision2D coll)
-    {
-        // If a missile hits this object
-        if (coll.transform.tag == "ground"|| coll.transform.tag == "NPC")
-        {
-            //Debug.Log("HIT!");
+    //void OnCollisionEnter2D(Collision2D coll)
+    //{
+    //    // If a missile hits this object
+    //    if (coll.transform.tag == "ground"|| coll.transform.tag == "NPC")
+    //    {
+    //        //Debug.Log("HIT!");
 
-            // Spawn an explosion at each point of contact
-            foreach (ContactPoint2D missileHit in coll.contacts)
-            {
-                Vector2 hitPoint = missileHit.point;
-                jumpDir = (Vector2)transform.position - hitPoint;
-                jumpDir.Normalize();
-                //Instantiate(explosion, new Vector3(hitPoint.x, hitPoint.y, 0), Quaternion.identity);
-            }
-        }
-    }
+    //        // Spawn an explosion at each point of contact
+    //        foreach (ContactPoint2D missileHit in coll.contacts)
+    //        {
+    //            Vector2 hitPoint = missileHit.point;
+    //            jumpDir = (Vector2)transform.position - hitPoint;
+    //            jumpDir.Normalize();
+    //            //Instantiate(explosion, new Vector3(hitPoint.x, hitPoint.y, 0), Quaternion.identity);
+    //        }
+    //    }
+    //}
 
-	private void OnCollisionExit2D(Collision2D coll)
-	{
-		if (coll.transform.tag == "ground" || coll.transform.tag == "NPC")
-		{
-			jumpDir = Vector2.zero;
-		}
-	}
+	//private void OnCollisionExit2D(Collision2D coll)
+	//{
+	//	if (coll.transform.tag == "ground" || coll.transform.tag == "NPC")
+	//	{
+	//		jumpDir = Vector2.zero;
+	//	}
+	//}
 
     private void Awake()
 	{
@@ -88,6 +89,24 @@ public class CharacterController2D : MonoBehaviour
 					OnLandEvent.Invoke();
 			}
 		}
+
+		//colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, m_GroundCheck.GetComponent<CircleCollider2D>().radius * transform.localScale.x + 0.1f, m_WhatIsJumpDir);
+		//float bestDot = 0;
+		//for (int i = 0; i < colliders.Length; i++)
+		//{
+		//	if (colliders[i].gameObject != gameObject)
+		//	{
+		//		var dir = (transform.position - colliders[i].transform.position).normalized;
+		//		var dot = Vector3.Dot(dir, transform.position);
+		//		if (dot < 0 && (jumpDir == Vector2.zero || dot< bestDot))
+  //              {
+		//			jumpDir = (colliders[i].transform.position - transform.position).normalized;
+		//			bestDot = dot;
+
+		//		}
+		//	}
+		//}
+
 		colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, m_GroundCheck.GetComponent<CircleCollider2D>().radius * transform.localScale.x + 0.1f, m_WhatIsFakeGround);
 		for (int i = 0; i < colliders.Length; i++)
 		{

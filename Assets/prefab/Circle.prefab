@@ -160,7 +160,7 @@ SpringJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -9.370001, y: 0}
+  m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
   m_Distance: 0.005
   m_DampingRatio: 1
@@ -183,7 +183,10 @@ MonoBehaviour:
   m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 576
+  m_WhatIsJumpDir:
+    serializedVersion: 2
+    m_Bits: 640
   m_WhatIsFakeGround:
     serializedVersion: 2
     m_Bits: 128

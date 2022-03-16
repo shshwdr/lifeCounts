@@ -1460,3 +1460,27 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 2838.653733 seconds.
+  path: Assets/Resources/animals/normal.prefab
+  artifactKey: Guid(92687ba65a7609a46811e7e3276e20ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/animals/normal.prefab using Guid(92687ba65a7609a46811e7e3276e20ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '743a21af4600bd9276a6f0132481d004') in 0.128511 seconds 
+  Import took 0.139724 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.556343 seconds.
+  path: Assets/Resources/animals/mouse Variant.prefab
+  artifactKey: Guid(99ec2fdea2a1c53499aa27da2e2dfa16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/animals/mouse Variant.prefab using Guid(99ec2fdea2a1c53499aa27da2e2dfa16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2298365abed5eb773cc09404e62e475e') in 0.032756 seconds 
+  Import took 0.043826 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.014593 seconds.
+  path: Assets/Resources/animals/bird.prefab
+  artifactKey: Guid(3fa4f7e2592fdf8498a805e849a0b72e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/animals/bird.prefab using Guid(3fa4f7e2592fdf8498a805e849a0b72e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4cfdf075365e4f6dc3b18ad61eea643') in 0.033665 seconds 
+  Import took 0.045019 seconds .
+
