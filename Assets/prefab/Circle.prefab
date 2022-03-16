@@ -118,8 +118,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 0.1
-  m_LinearDrag: 1
-  m_AngularDrag: 1
+  m_LinearDrag: 0.5
+  m_AngularDrag: 0.5
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -160,7 +160,7 @@ SpringJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: -9.370001, y: 0}
   m_AutoConfigureDistance: 1
   m_Distance: 0.005
   m_DampingRatio: 1
@@ -196,6 +196,7 @@ MonoBehaviour:
   OnCrouchEvent:
     m_PersistentCalls:
       m_Calls: []
+  jumpDir: {x: 0, y: 0}
 --- !u!114 &8375509736700126752
 MonoBehaviour:
   m_ObjectHideFlags: 0

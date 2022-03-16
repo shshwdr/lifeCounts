@@ -34,25 +34,33 @@ public class CharacterController2D : MonoBehaviour
 	
 	public Vector2 jumpDir;
 
-	//void OnCollisionEnter2D(Collision2D coll)
-	//{
-	//	// If a missile hits this object
-	//	if (coll.transform.tag == "ground")
-	//	{
-	//		//Debug.Log("HIT!");
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        // If a missile hits this object
+        if (coll.transform.tag == "ground"|| coll.transform.tag == "NPC")
+        {
+            //Debug.Log("HIT!");
 
-	//		// Spawn an explosion at each point of contact
-	//		foreach (ContactPoint2D missileHit in coll.contacts)
-	//		{
-	//			Vector2 hitPoint = missileHit.point;
-	//			jumpDir = (Vector2)transform.position - hitPoint;
-	//			jumpDir.Normalize();
-	//			//Instantiate(explosion, new Vector3(hitPoint.x, hitPoint.y, 0), Quaternion.identity);
-	//		}
-	//	}
-	//}
+            // Spawn an explosion at each point of contact
+            foreach (ContactPoint2D missileHit in coll.contacts)
+            {
+                Vector2 hitPoint = missileHit.point;
+                jumpDir = (Vector2)transform.position - hitPoint;
+                jumpDir.Normalize();
+                //Instantiate(explosion, new Vector3(hitPoint.x, hitPoint.y, 0), Quaternion.identity);
+            }
+        }
+    }
 
-	private void Awake()
+	private void OnCollisionExit2D(Collision2D coll)
+	{
+		if (coll.transform.tag == "ground" || coll.transform.tag == "NPC")
+		{
+			jumpDir = Vector2.zero;
+		}
+	}
+
+    private void Awake()
 	{
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
 
@@ -169,7 +177,13 @@ public class CharacterController2D : MonoBehaviour
 		{
 			// Add a vertical force to the player.
 			m_Grounded = false;
+			if(jumpDir.magnitude == 0)
+            {
+				jumpDir = Vector2.zero - (Vector2)transform.position;
+
+			}
 			m_Rigidbody2D.AddForce((Vector2.zero - (Vector2)transform.position).normalized * m_JumpForce/*new Vector2(0f, m_JumpForce)*/);
+			jumpDir = Vector2.zero;
 		}
 	}
 

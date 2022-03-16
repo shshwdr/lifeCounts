@@ -9,9 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/spring.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/home.unity
+    guid: 8c729b2469c176945be9c449af1fb1d5
+  - enabled: 1
     path: Assets/Scenes/0.unity
-    guid: f34cbb6ade57a164e83ee14039fbe402
+    guid: 832cafe8aa1dea545abc24b50392b865
   - enabled: 1
     path: Assets/Scenes/1.unity
-    guid: 31b13a25a6c667a468e43d976a3cf78f
+    guid: a71fa2bc046b8c8468761f31c68327e3
   m_configObjects: {}
