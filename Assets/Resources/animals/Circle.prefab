@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1890208534}
   - component: {fileID: 4192571625674442364}
   - component: {fileID: 8375509736700126752}
+  - component: {fileID: 771138212130534174}
   m_Layer: 7
   m_Name: Circle
   m_TagString: Untagged
@@ -232,6 +233,25 @@ MonoBehaviour:
     applyColorToPrependedName: 0
     prependActorNameSeparator: ': '
     subtitleColor: {r: 1, g: 1, b: 1, a: 1}
+--- !u!95 &771138212130534174
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003455746696570625}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &6150131576645987300
 PrefabInstance:
   m_ObjectHideFlags: 0

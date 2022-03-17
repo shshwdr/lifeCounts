@@ -8,6 +8,11 @@ public class NPC : MonoBehaviour
     public bool isLinked = false;
     CinemachineTargetGroup targetGroup;
     public string animalType;
+    Animator animator;
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +22,12 @@ public class NPC : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //test
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+
+            animator.SetTrigger("unlink");
+        }
     }
 
     public void link()
@@ -37,6 +47,7 @@ public class NPC : MonoBehaviour
         {
             Debug.LogWarning("camera not removed");
         }
+        animator.SetTrigger("link");
         StageLevelManager.Instance.linkAnimal(animalType);
         Debug.Log("link");
     }

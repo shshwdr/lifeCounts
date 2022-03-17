@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6444630705085509198}
   - component: {fileID: 8243524688599916710}
-  - component: {fileID: 2272935507223993196}
+  - component: {fileID: 4941570956701688933}
   m_Layer: 0
   m_Name: BoarBallTransform
   m_TagString: Untagged
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &2272935507223993196
+--- !u!95 &4941570956701688933
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -93,7 +93,7 @@ Animator:
   m_GameObject: {fileID: 1754409810411249701}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0a36bfa2c2b41a74aa86f324722bb61e, type: 2}
+  m_Controller: {fileID: 9100000, guid: f24b482510c108d449ffe73530fd405f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

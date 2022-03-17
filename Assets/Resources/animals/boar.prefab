@@ -82,7 +82,7 @@ PrefabInstance:
     - target: {fileID: 647955501256251419, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 52e07f8f307c6394f893b4f4047494bb, type: 3}
+      objectReference: {fileID: -6908434375037431684, guid: d69fb3e665f2ad648875ad64051814cf, type: 3}
     - target: {fileID: 647955501256251419, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -99,6 +99,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1126286562578582539, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: 8dd66882ad8309f46953a3b1d5aba618, type: 2}
     - target: {fileID: 1544321813070108888, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
       propertyPath: m_Distance
       value: 1.3
@@ -210,3 +214,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 171e8d1174fcfaf43a3ae9eeda9859dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  smashVelocity: 10

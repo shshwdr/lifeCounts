@@ -5,6 +5,7 @@ using UnityEngine;
 public class SmashWall : MonoBehaviour
 {
     Rigidbody2D rb;
+    public float smashVelocity = 10f;
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -26,7 +27,7 @@ public class SmashWall : MonoBehaviour
         if(collision.tag == "Breakable")
         {
             Debug.Log("velocity " + rb.velocity.magnitude);
-            if (rb.velocity.magnitude > 5f)
+            if (rb.velocity.magnitude > smashVelocity)
             {
                 Destroy(collision.gameObject);
             }
