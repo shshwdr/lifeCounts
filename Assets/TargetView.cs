@@ -27,9 +27,9 @@ public class TargetView : MonoBehaviour
         var stageManager = StageLevelManager.Instance;
         var levelInfo = stageManager.currentLevel;
 
-        var mainTargetText = $"Rescue {stageManager.getRescuedCount()} / {levelInfo.mainTargetCount} {levelInfo.mainTarget}";
+        var mainTargetText = $"Rescue {stageManager.getRescuedMainCount()} / {levelInfo.mainTargetCount} {levelInfo.mainTarget}";
         mainTargetLabel.text = mainTargetText;
-        var targetText = $"{stageManager.getRescuedMainCount()} / {levelInfo.targetCount}";
+        var targetText = $"{stageManager.getRescuedCount()} / {levelInfo.targetCount}";
         targetLabel.text = targetText;
 
         finishButton.gameObject.SetActive(stageManager.getMainTargetFinish());
