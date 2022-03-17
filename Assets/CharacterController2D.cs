@@ -22,6 +22,8 @@ public class CharacterController2D : MonoBehaviour
 	private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 	private Vector3 m_Velocity = Vector3.zero;
 
+	float jumpCoolDownTimer = 1;
+	float jumpCoolDown = 0.5f;
 	[Header("Events")]
 	[Space]
 
@@ -74,6 +76,7 @@ public class CharacterController2D : MonoBehaviour
 
 	private void FixedUpdate()
 	{
+		jumpCoolDownTimer += Time.deltaTime;
 		bool wasGrounded = m_Grounded;
 		m_Grounded = false;
 
@@ -84,6 +87,13 @@ public class CharacterController2D : MonoBehaviour
 		{
 			if (colliders[i].gameObject != gameObject)
 			{
+				//if (colliders[i].tag == "ground")
+				//{
+				//	if ((colliders[i].transform.position - transform.position).y < 0)
+				//	{
+				//		continue;
+				//	}
+				//}
 				m_Grounded = true;
 				if (!wasGrounded)
 					OnLandEvent.Invoke();
@@ -112,6 +122,13 @@ public class CharacterController2D : MonoBehaviour
 		{
 			if (colliders[i].gameObject != gameObject)
 			{
+				if (colliders[i].tag == "ground")
+				{
+					if ((colliders[i].transform.position - transform.position).y < 0)
+					{
+						continue;
+					}
+				}
 				m_FakeGrounded = true;
                 if (colliders[i].GetComponent<CharacterController2D>())
                 {
@@ -192,17 +209,14 @@ public class CharacterController2D : MonoBehaviour
 			}
 		}
 		// If the player should jump...
-		if (m_Grounded && jump)
+		if (m_Grounded && jump && jumpCoolDownTimer>=jumpCoolDown)
 		{
 			// Add a vertical force to the player.
 			m_Grounded = false;
-			if(jumpDir.magnitude == 0)
-            {
-				jumpDir = Vector2.zero - (Vector2)transform.position;
-
-			}
-			m_Rigidbody2D.AddForce((Vector2.zero - (Vector2)transform.position).normalized * m_JumpForce/*new Vector2(0f, m_JumpForce)*/);
+			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+			//m_Rigidbody2D.AddForce((Vector2.zero - (Vector2)transform.position).normalized * m_JumpForce/*new Vector2(0f, m_JumpForce)*/);
 			jumpDir = Vector2.zero;
+			jumpCoolDownTimer = 0;
 		}
 	}
 
