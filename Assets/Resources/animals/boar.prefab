@@ -17,7 +17,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 647955501256251412, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
       propertyPath: m_Name
-      value: pig
+      value: boar
       objectReference: {fileID: 0}
     - target: {fileID: 647955501256251412, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
       propertyPath: m_IsActive
@@ -106,6 +106,10 @@ PrefabInstance:
     - target: {fileID: 1544321813070108888, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
       propertyPath: m_MaxDistanceOnly
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4207871266040400011, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
+      propertyPath: animalType
+      value: boar
       objectReference: {fileID: 0}
     - target: {fileID: 5785812302737228005, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
       propertyPath: m_AnchorMax.y

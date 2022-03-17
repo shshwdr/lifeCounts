@@ -21,7 +21,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 647955501256251412, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
       propertyPath: m_Name
-      value: normal (1)
+      value: normal
       objectReference: {fileID: 0}
     - target: {fileID: 647955501256251412, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
       propertyPath: m_IsActive
@@ -194,6 +194,10 @@ PrefabInstance:
     - target: {fileID: 8154105834660026677, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
       propertyPath: actor
       value: NPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 8154105834660026677, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
