@@ -9,9 +9,11 @@ public class NPC : MonoBehaviour
     CinemachineTargetGroup targetGroup;
     public string animalType;
     Animator animator;
+    Rigidbody2D rb;
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
     }
     // Start is called before the first frame update
     void Start()
@@ -43,11 +45,14 @@ public class NPC : MonoBehaviour
                 break;
             }
         }
+
+        
         if (!found)
         {
             Debug.LogWarning("camera not removed");
         }
         animator.SetTrigger("link");
+        rb.freezeRotation = false;
         StageLevelManager.Instance.linkAnimal(animalType);
         Debug.Log("link");
     }

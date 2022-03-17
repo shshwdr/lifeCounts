@@ -69,6 +69,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: NPC
       objectReference: {fileID: 0}
+    - target: {fileID: 1003455746696570636, guid: 7b58aba35a8b73f498555addda716a9c, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1003455746696570639, guid: 7b58aba35a8b73f498555addda716a9c, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -322,3 +326,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d95166e260b75d74f9d7ec8d4270a3a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isLinked: 0
+  animalType: 
