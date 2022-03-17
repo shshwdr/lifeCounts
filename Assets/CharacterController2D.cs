@@ -23,7 +23,7 @@ public class CharacterController2D : MonoBehaviour
 	private Vector3 m_Velocity = Vector3.zero;
 
 	float jumpCoolDownTimer = 1;
-	float jumpCoolDown = 0.5f;
+	float jumpCoolDown = 0.3f;
 	[Header("Events")]
 	[Space]
 

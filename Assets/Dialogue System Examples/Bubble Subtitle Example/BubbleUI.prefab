@@ -657,8 +657,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Subtitle text. test Subtitle text. test Subtitle text. test Subtitle text.
-    test Subtitle text. test '
+  m_Text: '
+
+'
 --- !u!114 &114785316006335746
 MonoBehaviour:
   m_ObjectHideFlags: 0

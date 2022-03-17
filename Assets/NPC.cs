@@ -37,6 +37,7 @@ public class NPC : MonoBehaviour
         {
             Debug.LogWarning("camera not removed");
         }
+        StageLevelManager.Instance.linkAnimal(animalType);
         Debug.Log("link");
     }
 

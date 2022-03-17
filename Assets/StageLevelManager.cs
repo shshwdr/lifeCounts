@@ -1,3 +1,4 @@
+using Pool;
 using Sinbad;
 using System.Collections;
 using System.Collections.Generic;
@@ -11,11 +12,16 @@ public class LevelInfo
     public string description;
     public int isDeprecated;
     public int id;
+    public string mainTarget;
+    public int mainTargetCount;
+    public int targetCount;
 }
 public class StageLevelManager : Singleton<StageLevelManager>
 {
     public int currentLevelId;
     public int maxUnlockedLevel = 0;
+    int rescuedCount = 0;
+    int rescuedMainCount = 0;
     public LevelInfo currentLevel { get { return levelInfoList[currentLevelId]; } }
     public Dictionary<string, LevelInfo> levelInfoByName = new Dictionary<string, LevelInfo>();
     public List<LevelInfo> levelInfoList = new List<LevelInfo>();
@@ -28,6 +34,10 @@ public class StageLevelManager : Singleton<StageLevelManager>
         return true;
     }
 
+    public void restart()
+    {
+        startNextLevel();
+    }
     
     public void addLevel()
     {
@@ -41,14 +51,44 @@ public class StageLevelManager : Singleton<StageLevelManager>
         SceneManager.LoadScene("home");
     }
 
+    public int getRescuedCount()
+    {
+        return rescuedCount;
+    }
+
+    public int getRescuedMainCount()
+    {
+        return rescuedMainCount;
+    }
+
+    public bool getMainTargetFinish()
+    {
+        return rescuedMainCount >= currentLevel.mainTargetCount;
+    }
+    public bool getTargetFinish()
+    {
+        return rescuedCount >= currentLevel.targetCount;
+    }
+    public void linkAnimal(string type)
+    {
+        rescuedCount++;
+        if(type == currentLevel.mainTarget)
+        {
+            rescuedMainCount++;
+        }
+        EventPool.Trigger("linkAnimal");
+    }
+
     public void startLevel(int id)
     {
         currentLevelId = id;
-        SceneManager.LoadScene(currentLevel.sceneName);
+        startNextLevel();
     }
 
     public void startNextLevel()
     {
+        rescuedCount = 0;
+        rescuedMainCount = 0;
         SceneManager.LoadScene(currentLevel.sceneName);
     }
     private void Awake()
@@ -75,6 +115,9 @@ public class StageLevelManager : Singleton<StageLevelManager>
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            restart();
+        }
     }
 }
