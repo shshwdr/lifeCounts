@@ -31,11 +31,17 @@ public class ClickToAttach : MonoBehaviour
         }
     }
 
-    void updateAttach()
+    IEnumerator updateAttach()
     {
+        yield return null;
         if (isAttached)
         {
-
+            var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            var mouseDir = mousePos - gameObject.transform.position;
+            mouseDir.z = 0.0f;
+            mouseDir = mouseDir.normalized;
+            rb.AddForce(mouseDir * 100f);
+            yield return new WaitForSeconds(0.2f);
             rb.bodyType = RigidbodyType2D.Static;
         }
         else

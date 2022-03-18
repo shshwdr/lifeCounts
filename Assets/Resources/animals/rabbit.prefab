@@ -25,7 +25,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 647955501256251412, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
       propertyPath: m_Name
-      value: bee
+      value: rabbit
       objectReference: {fileID: 0}
     - target: {fileID: 647955501256251412, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
       propertyPath: m_IsActive
@@ -78,7 +78,7 @@ PrefabInstance:
     - target: {fileID: 647955501256251419, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: fef53df4046f0c348914d13046ac0cf4, type: 3}
+      objectReference: {fileID: 21300000, guid: 5db09d1c5d9ea3c4db2535493113d2d9, type: 3}
     - target: {fileID: 647955501256251419, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
       propertyPath: m_Color.b
       value: 1
