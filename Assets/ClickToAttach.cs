@@ -10,7 +10,7 @@ public class ClickToAttach : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        updateAttach();
+        StartCoroutine(updateAttach());
     }
 
     private void OnMouseDown()
@@ -25,7 +25,7 @@ public class ClickToAttach : MonoBehaviour
             if (GetComponent<NPC>().isLinked)
             {
                 isAttached = !isAttached;
-                updateAttach();
+                StartCoroutine( updateAttach());
             }
             
         }
