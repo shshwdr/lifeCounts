@@ -48,6 +48,7 @@ public class StageLevelManager : Singleton<StageLevelManager>
     public void returnHome()
     {
 
+        MusicManager.Instance.playHomeMusic();
         SceneManager.LoadScene("home");
     }
 
@@ -89,6 +90,7 @@ public class StageLevelManager : Singleton<StageLevelManager>
     {
         rescuedCount = 0;
         rescuedMainCount = 0;
+        MusicManager.Instance.playLevelMusic();
         SceneManager.LoadScene(currentLevel.sceneName);
     }
     private void Awake()
