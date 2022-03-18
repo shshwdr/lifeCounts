@@ -37,23 +37,42 @@ public class CharacterController2D : MonoBehaviour
 	
 	public Vector2 jumpDir;
 
-    //void OnCollisionEnter2D(Collision2D coll)
-    //{
-    //    // If a missile hits this object
-    //    if (coll.transform.tag == "ground"|| coll.transform.tag == "NPC")
-    //    {
-    //        //Debug.Log("HIT!");
 
-    //        // Spawn an explosion at each point of contact
-    //        foreach (ContactPoint2D missileHit in coll.contacts)
-    //        {
-    //            Vector2 hitPoint = missileHit.point;
-    //            jumpDir = (Vector2)transform.position - hitPoint;
-    //            jumpDir.Normalize();
-    //            //Instantiate(explosion, new Vector3(hitPoint.x, hitPoint.y, 0), Quaternion.identity);
-    //        }
-    //    }
-    //}
+	float originDrag;
+	float originMass;
+	float dragModifier;
+	float massModifier;
+    public void UpdateDragModifier(float multiplier)
+    {
+		dragModifier = multiplier;
+		m_Rigidbody2D.drag = originDrag * dragModifier;
+
+	}
+
+	public void UpdateMassModifier(float multiplier)
+	{
+		massModifier = multiplier;
+		m_Rigidbody2D.mass = originMass * massModifier;
+
+	}
+
+	//void OnCollisionEnter2D(Collision2D coll)
+	//{
+	//    // If a missile hits this object
+	//    if (coll.transform.tag == "ground"|| coll.transform.tag == "NPC")
+	//    {
+	//        //Debug.Log("HIT!");
+
+	//        // Spawn an explosion at each point of contact
+	//        foreach (ContactPoint2D missileHit in coll.contacts)
+	//        {
+	//            Vector2 hitPoint = missileHit.point;
+	//            jumpDir = (Vector2)transform.position - hitPoint;
+	//            jumpDir.Normalize();
+	//            //Instantiate(explosion, new Vector3(hitPoint.x, hitPoint.y, 0), Quaternion.identity);
+	//        }
+	//    }
+	//}
 
 	//private void OnCollisionExit2D(Collision2D coll)
 	//{
@@ -63,7 +82,7 @@ public class CharacterController2D : MonoBehaviour
 	//	}
 	//}
 
-    private void Awake()
+	private void Awake()
 	{
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
 
@@ -72,6 +91,8 @@ public class CharacterController2D : MonoBehaviour
 
 		if (OnCrouchEvent == null)
 			OnCrouchEvent = new BoolEvent();
+		originMass = m_Rigidbody2D.mass;
+		originDrag = m_Rigidbody2D.drag;
 	}
 
 	private void FixedUpdate()
