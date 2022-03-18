@@ -9,10 +9,8 @@ public class TriggerToPassLevel : Trigger
         base.trigger();
 
 
+        StageLevelManager.Instance.finishLevel();
 
-
-        RewardView view =  GameObject.FindObjectOfType<RewardView>(true);
-        view.showReward();
         
     }
     // Start is called before the first frame update

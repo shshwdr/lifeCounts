@@ -15,6 +15,7 @@ public class LevelInfo
     public string mainTarget;
     public int mainTargetCount;
     public int targetCount;
+    public float time;
 }
 public class StageLevelManager : Singleton<StageLevelManager>
 {
@@ -22,6 +23,14 @@ public class StageLevelManager : Singleton<StageLevelManager>
     public int maxUnlockedLevel = 0;
     int rescuedCount = 0;
     int rescuedMainCount = 0;
+
+    float countDownTime = 0;
+    float countDownTimer = 0;
+
+    public bool shouldShowCountdown()
+    {
+        return countDownTime > 0;
+    }
     public LevelInfo currentLevel { get { return levelInfoList[currentLevelId]; } }
     public Dictionary<string, LevelInfo> levelInfoByName = new Dictionary<string, LevelInfo>();
     public List<LevelInfo> levelInfoList = new List<LevelInfo>();
@@ -47,6 +56,7 @@ public class StageLevelManager : Singleton<StageLevelManager>
 
     public void returnHome()
     {
+        Time.timeScale = 1;
 
         MusicManager.Instance.playHomeMusic();
         SceneManager.LoadScene("home");
@@ -65,6 +75,13 @@ public class StageLevelManager : Singleton<StageLevelManager>
     public bool getMainTargetFinish()
     {
         return rescuedMainCount >= currentLevel.mainTargetCount;
+    }
+
+    public void finishLevel()
+    {
+        Time.timeScale = 0;
+        RewardView view = GameObject.FindObjectOfType<RewardView>(true);
+        view.showReward();
     }
     public bool getTargetFinish()
     {
@@ -88,9 +105,12 @@ public class StageLevelManager : Singleton<StageLevelManager>
 
     public void startNextLevel()
     {
+        Time.timeScale = 1;
         rescuedCount = 0;
         rescuedMainCount = 0;
         MusicManager.Instance.playLevelMusic();
+        countDownTime = currentLevel.time;
+        countDownTimer = 0;
         SceneManager.LoadScene(currentLevel.sceneName);
     }
     private void Awake()
@@ -111,7 +131,7 @@ public class StageLevelManager : Singleton<StageLevelManager>
     // Start is called before the first frame update
     void Start()
     {
-        
+        startNextLevel();
     }
 
     // Update is called once per frame
@@ -120,6 +140,16 @@ public class StageLevelManager : Singleton<StageLevelManager>
         if (Input.GetKeyDown(KeyCode.R))
         {
             restart();
+        }
+
+        if(countDownTime > 0)
+        {
+            countDownTimer += Time.deltaTime;
+            EventPool.Trigger<int>("updateTimer", (int)(countDownTime - countDownTimer));
+            if (countDownTimer >= countDownTime)
+            {
+                finishLevel();
+            }
         }
     }
 }

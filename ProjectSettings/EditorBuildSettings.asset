@@ -6,14 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/spring.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/0.unity
+    guid: 832cafe8aa1dea545abc24b50392b865
   - enabled: 1
     path: Assets/Scenes/home.unity
     guid: 8c729b2469c176945be9c449af1fb1d5
-  - enabled: 1
-    path: Assets/Scenes/0.unity
-    guid: 832cafe8aa1dea545abc24b50392b865
   - enabled: 1
     path: Assets/Scenes/2.unity
     guid: b810950e86e40b941b157012388b9ac9
@@ -29,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/3.unity
     guid: a4cae999269a0184596056b92020b73b
+  - enabled: 1
+    path: Assets/Scenes/6.unity
+    guid: 4e4b93576b467904a9a97dde21f10b35
   m_configObjects: {}

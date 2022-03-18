@@ -25,10 +25,12 @@ public class MusicManager : Singleton<MusicManager>
     }
     public void playHomeMusic()
     {
+        audioSource = GetComponent<AudioSource>();
         startPlay(homeMusic);
     }
     public void playLevelMusic()
     {
+        audioSource = GetComponent<AudioSource>();
         startPlay(levelMusic);
     }
 

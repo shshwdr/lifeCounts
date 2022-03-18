@@ -1,7 +1,8 @@
-﻿displayName,description,sceneName,isDeprecated,mainTarget,mainTargetCount,targetCount
-0,0,0,0,normal,1,1
-1,1,1,0,normal,2,4
-2,2,2,0,bird,1,4
-3,3,3,0,bird,2,5
-4,4,4,0,boar,1,3
-5,5,5,0,boar,1,5
+﻿displayName,description,sceneName,isDeprecated,mainTarget,mainTargetCount,targetCount,time
+0,0,0,0,normal,1,1,-1
+1,1,1,0,normal,2,4,-1
+2,2,2,0,bird,1,4,-1
+3,3,3,0,bird,2,5,-1
+4,4,4,0,boar,1,3,-1
+5,5,5,0,boar,1,5,-1
+6,6,6,0,normal,1,1,5

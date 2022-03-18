@@ -9,6 +9,7 @@ public class TargetView : MonoBehaviour
 
     public Text mainTargetLabel;
     public Text targetLabel;
+    public Text countdownLabel;
     public Button finishButton;
     GameObject finishTarget;
 
@@ -19,9 +20,16 @@ public class TargetView : MonoBehaviour
         finishTarget = GameObject.Find("FinishTarget").gameObject;
         finishTarget.SetActive(false);
         EventPool.OptIn("linkAnimal",updateView);
-        finishButton.onClick.AddListener(delegate { finishTarget.SetActive(true); });
+        countdownLabel.gameObject.SetActive( StageLevelManager.Instance.shouldShowCountdown());
+        EventPool.OptIn<int>("updateTimer", updateCountdown);
+        finishButton.onClick.AddListener(delegate {
+            StageLevelManager.Instance.finishLevel(); // finishTarget.SetActive(true);
+                                                      });
     }
-
+    void updateCountdown(int t)
+    {
+        countdownLabel.text = t.ToString();
+    }
     void updateView()
     {
         var stageManager = StageLevelManager.Instance;
