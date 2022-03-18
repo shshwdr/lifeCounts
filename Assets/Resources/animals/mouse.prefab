@@ -37,11 +37,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 647955501256251418, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.2
+      value: 1.62
       objectReference: {fileID: 0}
     - target: {fileID: 647955501256251418, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: -1.07
       objectReference: {fileID: 0}
     - target: {fileID: 647955501256251418, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -186,9 +186,9 @@ FixedJoint2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4971101908280719186}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
-  m_EnableCollision: 0
+  m_EnableCollision: 1
   m_ConnectedRigidBody: {fileID: 0}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
