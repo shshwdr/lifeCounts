@@ -31,17 +31,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 647955501256251417, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 647955501256251418, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 647955501256251418, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.370001
+      value: -3.52
       objectReference: {fileID: 0}
     - target: {fileID: 647955501256251418, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -4.37
       objectReference: {fileID: 0}
     - target: {fileID: 647955501256251418, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -106,6 +110,14 @@ PrefabInstance:
     - target: {fileID: 4207871266040400011, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
       propertyPath: animalType
       value: bird
+      objectReference: {fileID: 0}
+    - target: {fileID: 4557075582822316393, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
+      propertyPath: m_JumpForce
+      value: 600
+      objectReference: {fileID: 0}
+    - target: {fileID: 4557075582822316393, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
+      propertyPath: jumpCoolDown
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5785812302737228005, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
       propertyPath: m_AnchorMax.y
@@ -194,7 +206,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 647955501256251412, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
   m_PrefabInstance: {fileID: 6070374117983657503}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &-2687293048981157580
+--- !u!114 &1119906192
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -203,7 +215,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6683426515696715275}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6e7cdff8fe71fc489a33ee2c9faffc9, type: 3}
+  m_Script: {fileID: 11500000, guid: e941a82886696bb45a557385e9580a7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isAttached: 0
+  isAttached: 1
+  originalJumpForce: 50
+  linkedJumpForce: 600

@@ -171,5 +171,29 @@ PrefabInstance:
       propertyPath: actor
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1544321813070108888, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
+--- !u!1 &4971101908280719186 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 647955501256251412, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
+  m_PrefabInstance: {fileID: 5477193811626372934}
+  m_PrefabAsset: {fileID: 0}
+--- !u!255 &7273534290761803053
+FixedJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4971101908280719186}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_DampingRatio: 0
+  m_Frequency: 0

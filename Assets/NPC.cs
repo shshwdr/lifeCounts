@@ -67,15 +67,22 @@ public class NPC : MonoBehaviour
         {
             if(GameManager.Instance.linkType == LinkType.distance)
             {
-                GetComponent<DistanceJoint2D>().enabled = true;
-                GetComponent<DistanceJoint2D>().connectedBody = collision.GetComponent<Rigidbody2D>();
+                GetComponent<AnchoredJoint2D>().enabled = true;
+                GetComponent<AnchoredJoint2D>().connectedBody = collision.GetComponent<Rigidbody2D>();
 
             }
             else
             {
 
-                GetComponent<SpringJoint2D>().enabled = true;
-                GetComponent<SpringJoint2D>().connectedBody = collision.GetComponent<Rigidbody2D>();
+                GetComponent<AnchoredJoint2D>().enabled = true;
+                GetComponent<AnchoredJoint2D>().connectedBody = collision.GetComponent<Rigidbody2D>();
+            }
+
+            if (GetComponent<FixedJoint2D>())
+            {
+                var dir = transform.position - collision.transform.position;
+                dir = Quaternion.Euler(0, 0, -collision.transform.rotation.eulerAngles.z) * dir;
+                GetComponent<FixedJoint2D>().connectedAnchor = dir;
             }
 
             if (GetComponent<PixelCrushers.DialogueSystem.DialogueSystemTrigger>())
