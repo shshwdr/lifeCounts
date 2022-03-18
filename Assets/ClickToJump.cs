@@ -5,11 +5,17 @@ using UnityEngine;
 public class ClickToJump : MonoBehaviour
 {
     Rigidbody2D rb;
+    CharacterController2D controller2d;
     public bool isAttached = false;
+
+    public float originalJumpForce = 50;
+    public float linkedJumpForce = 600f;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        controller2d = GetComponent<CharacterController2D>();
+        controller2d.m_JumpForce = originalJumpForce;
     }
 
     private void OnMouseDown()
@@ -19,10 +25,16 @@ public class ClickToJump : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GetComponent<NPC>().isLinked)
+        {
+
+            controller2d.m_JumpForce = linkedJumpForce;
+        }
         if (Input.GetMouseButtonDown(1))
         {
             if (GetComponent<NPC>().isLinked)
             {
+
                 isAttached = !isAttached;
             }
 
