@@ -19,7 +19,15 @@ public class RangeCar : MonoBehaviour
 
         transform.DOMoveX(rangeShowDistance, moveTime).SetEase(Ease.Linear);
         yield return new WaitForSecondsRealtime(moveTime);
-        StageLevelManager.Instance.finishLevelReal();
+        if (StageLevelManager.Instance.isInHome)
+        {
+            StageLevelManager.Instance.startNextLevel();
+        }
+        else
+        {
+
+            StageLevelManager.Instance.finishLevelReal();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

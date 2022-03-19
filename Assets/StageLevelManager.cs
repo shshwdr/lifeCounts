@@ -31,6 +31,9 @@ public class StageLevelManager : Singleton<StageLevelManager>
 
     bool isGameFinished;
 
+    bool isHome;
+    public bool isInHome { get { return isHome; } }
+
     Dictionary<string, int> levelToStarCount = new Dictionary<string, int>();
 
     public int starCountInLevel(string sceneName)
@@ -47,7 +50,7 @@ public class StageLevelManager : Singleton<StageLevelManager>
     {
         return countDownTime > 0;
     }
-    public LevelInfo currentLevel { get { return levelInfoList[currentLevelId]; } }
+    public LevelInfo currentLevel { get { if(currentLevelId>=0) return levelInfoList[currentLevelId]; return null; } }
     public Dictionary<string, LevelInfo> levelInfoByName = new Dictionary<string, LevelInfo>();
     public List<LevelInfo> levelInfoList = new List<LevelInfo>();
     public bool hasNextLevel()
@@ -80,6 +83,7 @@ public class StageLevelManager : Singleton<StageLevelManager>
 
         MusicManager.Instance.playHomeMusic();
         SceneManager.LoadScene("home");
+        isHome = true;
     }
 
     public int getRescuedCount()
@@ -179,15 +183,22 @@ public class StageLevelManager : Singleton<StageLevelManager>
     public void startLevel(int id)
     {
         currentLevelId = id;
-        startNextLevel();
+        //startNextLevel();
+        finishLevel();
     }
 
     public void startNextLevel()
     {
+        isHome = false;
         isGameFinished = false;
         Time.timeScale = 1;
         rescuedCount = 0;
         rescuedMainCount = 0;
+        if (currentLevel == null)
+        {
+            isHome = true;
+            return;
+        }
         if (currentLevel.isTimeLevel)
         {
 
