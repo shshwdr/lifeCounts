@@ -13,6 +13,12 @@ public class TargetView : MonoBehaviour
     public Button finishButton;
     GameObject finishTarget;
 
+    public Transform mainTargetCheck;
+    public Transform targetCheck;
+
+    bool isMainTargetChecked;
+    bool isTargetChecked;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +45,23 @@ public class TargetView : MonoBehaviour
         mainTargetLabel.text = mainTargetText;
         var targetText = $"{stageManager.getRescuedCount()} / {levelInfo.targetCount}";
         targetLabel.text = targetText;
+
+        if (stageManager.getMainTargetFinish())
+        {
+            if (!isMainTargetChecked)
+            {
+                mainTargetCheck.localScale = Vector3.one;
+                isMainTargetChecked = true;
+            }
+        }
+        if (stageManager.getTargetFinish())
+        {
+            if (!isTargetChecked)
+            {
+                targetCheck.localScale = Vector3.one;
+                isTargetChecked = true;
+            }
+        }
 
         finishButton.gameObject.SetActive(stageManager.getMainTargetFinish());
     }
