@@ -6,9 +6,16 @@ public class Home : MonoBehaviour
 {
     public int maxAnimalToShow = 10;
     public Transform positionsParent;
+
+
     // Start is called before the first frame update
     void Start()
     {
+        if (!GameManager.Instance.hasGottenHome)
+        {
+            GameManager.Instance.hasGottenHome = true;
+            PixelCrushers.DialogueSystem.DialogueManager.StartConversation("home");
+        }
         int i = 0;
         int tier = 0;
         var positions = positionsParent.GetComponentsInChildren<Transform>();

@@ -6,6 +6,8 @@ using UnityEngine;
 public enum LinkType { spring, distance}
 public class GameManager : Singleton<GameManager>
 {
+    public bool hasGottenHome;
+
     static public void  popup(Transform target)
     {
 

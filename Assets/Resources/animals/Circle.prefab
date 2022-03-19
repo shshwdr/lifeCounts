@@ -223,6 +223,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: BubbleUI
       objectReference: {fileID: 0}
+    - target: {fileID: 11486436, guid: bee64addd10318640aec5e7713ee9ba7, type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 11486436, guid: bee64addd10318640aec5e7713ee9ba7, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 22400030, guid: bee64addd10318640aec5e7713ee9ba7, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
