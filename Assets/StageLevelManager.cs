@@ -1,3 +1,4 @@
+using Cinemachine;
 using Pool;
 using Sinbad;
 using System.Collections;
@@ -27,6 +28,8 @@ public class StageLevelManager : Singleton<StageLevelManager>
 
     float countDownTime = 0;
     float countDownTimer = 0;
+
+    bool isGameFinished;
 
     Dictionary<string, int> levelToStarCount = new Dictionary<string, int>();
 
@@ -135,6 +138,22 @@ public class StageLevelManager : Singleton<StageLevelManager>
     }
     public void finishLevel()
     {
+        //first disable player move and create car
+
+        var player = GameObject.FindObjectOfType<PlayerController>();
+        player.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+        Instantiate(Resources.Load<GameObject>("rangerCar"));
+        isGameFinished = true;
+        foreach(var camera in GameObject.FindObjectsOfType<CinemachineVirtualCamera>())
+        {
+            camera.Follow = null;
+        }
+        //when car finished moving start real level finish
+    }
+
+    public void finishLevelReal()
+    {
+
         Time.timeScale = 0;
         RewardView view = GameObject.FindObjectOfType<RewardView>(true);
         view.showReward();
@@ -145,6 +164,10 @@ public class StageLevelManager : Singleton<StageLevelManager>
     }
     public void linkAnimal(string type)
     {
+        if (isGameFinished)
+        {
+            return;
+        }
         rescuedCount++;
         if(type == currentLevel.mainTarget || currentLevel.mainTarget == "animal")
         {
@@ -161,6 +184,7 @@ public class StageLevelManager : Singleton<StageLevelManager>
 
     public void startNextLevel()
     {
+        isGameFinished = false;
         Time.timeScale = 1;
         rescuedCount = 0;
         rescuedMainCount = 0;

@@ -106,9 +106,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 771138212130534174, guid: 7b58aba35a8b73f498555addda716a9c, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: afc17fc02feec97488998e3bf3a6f6e5, type: 2}
     - target: {fileID: 1003455746696570625, guid: 7b58aba35a8b73f498555addda716a9c, type: 3}
       propertyPath: m_Name
-      value: player Variant
+      value: player
       objectReference: {fileID: 0}
     - target: {fileID: 1003455746696570625, guid: 7b58aba35a8b73f498555addda716a9c, type: 3}
       propertyPath: m_TagString
@@ -117,6 +121,14 @@ PrefabInstance:
     - target: {fileID: 1003455746696570636, guid: 7b58aba35a8b73f498555addda716a9c, type: 3}
       propertyPath: m_Mass
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003455746696570636, guid: 7b58aba35a8b73f498555addda716a9c, type: 3}
+      propertyPath: m_LinearDrag
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003455746696570636, guid: 7b58aba35a8b73f498555addda716a9c, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1003455746696570638, guid: 7b58aba35a8b73f498555addda716a9c, type: 3}
       propertyPath: m_Sprite
@@ -128,11 +140,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003455746696570639, guid: 7b58aba35a8b73f498555addda716a9c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.19
+      value: 1.72
       objectReference: {fileID: 0}
     - target: {fileID: 1003455746696570639, guid: 7b58aba35a8b73f498555addda716a9c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -6.75
       objectReference: {fileID: 0}
     - target: {fileID: 1003455746696570639, guid: 7b58aba35a8b73f498555addda716a9c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -243,6 +255,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1003455746696570639, guid: 7b58aba35a8b73f498555addda716a9c, type: 3}
   m_PrefabInstance: {fileID: 1465836274841329595}
   m_PrefabAsset: {fileID: 0}
+--- !u!255 &8424790048791735395
+FixedJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854163616373209274}
+  m_Enabled: 0
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: -0.029999971, y: -6.99}
+  m_DampingRatio: 0
+  m_Frequency: 0
 --- !u!114 &1111657468194283513
 MonoBehaviour:
   m_ObjectHideFlags: 0

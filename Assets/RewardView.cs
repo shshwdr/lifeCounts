@@ -65,7 +65,7 @@ public class RewardView : MonoBehaviour
         int starCount = StageLevelManager.Instance.starCount();
         for (int i = 0; i < starCount; i++)
         {
-            GameManager.popup(stars[i]);
+            GameManager.popup(stars[i],true);
             yield return new WaitForSecondsRealtime(0.7f);
             //Sequence mySequence = DOTween.Sequence();
             //mySequence.Append(stars[i].DOScale(Vector3.one*1.5f, 0.7f))

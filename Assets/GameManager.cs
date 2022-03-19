@@ -8,12 +8,12 @@ public class GameManager : Singleton<GameManager>
 {
     public bool hasGottenHome;
 
-    static public void  popup(Transform target)
+    static public void  popup(Transform target, bool shouldUpdate = false)
     {
 
         Sequence mySequence = DOTween.Sequence();
-        mySequence.Append(target.DOScale(Vector3.one * 1.5f, 0.7f).SetUpdate(true))
-          .Append(target.DOScale(Vector3.one * 1f, 0.7f).SetUpdate(true)).SetUpdate(true);
+        mySequence.Append(target.DOScale(Vector3.one * 1.5f, 0.7f).SetUpdate(shouldUpdate))
+          .Append(target.DOScale(Vector3.one * 1f, 0.7f).SetUpdate(shouldUpdate)).SetUpdate(shouldUpdate);
     }
     public LinkType linkType;
 
