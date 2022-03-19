@@ -29,9 +29,11 @@ public class StageLevelManager : Singleton<StageLevelManager>
     float countDownTime = 0;
     float countDownTimer = 0;
 
-    bool isGameFinished;
+    bool isFinished;
 
     bool isHome;
+
+    public bool isGameFinished { get { return isFinished; } }
     public bool isInHome { get { return isHome; } }
 
     Dictionary<string, int> levelToStarCount = new Dictionary<string, int>();
@@ -147,7 +149,7 @@ public class StageLevelManager : Singleton<StageLevelManager>
         var player = GameObject.FindObjectOfType<PlayerController>();
         player.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
         Instantiate(Resources.Load<GameObject>("rangerCar"));
-        isGameFinished = true;
+        isFinished = true;
         foreach(var camera in GameObject.FindObjectsOfType<CinemachineVirtualCamera>())
         {
             camera.Follow = null;
@@ -190,7 +192,7 @@ public class StageLevelManager : Singleton<StageLevelManager>
     public void startNextLevel()
     {
         isHome = false;
-        isGameFinished = false;
+        isFinished = false;
         Time.timeScale = 1;
         rescuedCount = 0;
         rescuedMainCount = 0;

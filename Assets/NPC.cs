@@ -64,9 +64,14 @@ public class NPC : MonoBehaviour
         {
             return;
         }
-        if (collision.GetComponent<Rigidbody2D>())
+        if (StageLevelManager.Instance.isGameFinished)
         {
-            if(GameManager.Instance.linkType == LinkType.distance)
+            return;
+        }
+        if (collision.GetComponent<CharacterController2D>())
+        {
+            link();
+            if (GameManager.Instance.linkType == LinkType.distance)
             {
                 GetComponent<AnchoredJoint2D>().enabled = true;
                 GetComponent<AnchoredJoint2D>().connectedBody = collision.GetComponent<Rigidbody2D>();
@@ -91,7 +96,6 @@ public class NPC : MonoBehaviour
 
                 Destroy(GetComponent<PixelCrushers.DialogueSystem.DialogueSystemTrigger>());
             }
-            link();
             //Destroy(this);
         }
     }
