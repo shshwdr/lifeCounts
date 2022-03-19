@@ -316,3 +316,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelMusic: {fileID: 8300000, guid: cbe532e37c059a24f80d66929ee60bd7, type: 3}
   homeMusic: {fileID: 8300000, guid: b235daadaaf06e44c9d4159fb12eb5bc, type: 3}
+  urgentMusic: {fileID: 8300000, guid: 8cccb76cef9140549a9e9e6f04e2ad78, type: 3}

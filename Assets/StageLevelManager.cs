@@ -146,7 +146,7 @@ public class StageLevelManager : Singleton<StageLevelManager>
     public void linkAnimal(string type)
     {
         rescuedCount++;
-        if(type == currentLevel.mainTarget)
+        if(type == currentLevel.mainTarget || currentLevel.mainTarget == "animal")
         {
             rescuedMainCount++;
         }

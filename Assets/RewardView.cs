@@ -21,7 +21,11 @@ public class RewardView : MonoBehaviour
     {
         GetComponent<UIView>().Show();
         panel.SetActive(true);
-        StageLevelManager.Instance.unlockNextLevel();
+        if (StageLevelManager.Instance.getMainTargetFinish())
+        {
+
+            StageLevelManager.Instance.unlockNextLevel();
+        }
         //StageLevelManager.Instance.addLevel();
         if (StageLevelManager.Instance.hasNextLevel())
         {
@@ -80,7 +84,13 @@ public class RewardView : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        nextLevelButton.onClick.AddListener(delegate { StageLevelManager.Instance.addLevel(); StageLevelManager.Instance.startNextLevel(); });
+        nextLevelButton.onClick.AddListener(delegate {
+            if (StageLevelManager.Instance.getMainTargetFinish())
+            {
+                StageLevelManager.Instance.addLevel();
+            }
+            
+            StageLevelManager.Instance.startNextLevel(); });
         returnButton.onClick.AddListener(delegate { StageLevelManager.Instance.returnHome(); });
         levelSelectionButton.onClick.AddListener(delegate { StageLevelManager.Instance.selectLevel(); });
     }

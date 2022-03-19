@@ -53,6 +53,7 @@ public class NPC : MonoBehaviour
         }
         animator.SetTrigger("link");
         rb.freezeRotation = false;
+        rb.bodyType = RigidbodyType2D.Dynamic;
         StageLevelManager.Instance.linkAnimal(animalType);
         Debug.Log("link");
     }
