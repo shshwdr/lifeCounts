@@ -1,12 +1,12 @@
 ﻿displayName,description,sceneName,isDeprecated,mainTarget,mainTargetCount,targetCount,time
 0,0,0,0,normal,1,1,-1
 1,1,1,0,normal,2,4,-1
-2,2,2,0,bird,1,4,-1
-3,3,3,0,bird,2,5,-1
-4,4,4,0,boar,1,3,-1
-5,5,5,0,boar,1,6,-1
+2,2,2,0,Bird,1,4,-1
+3,3,3,0,Bird,2,5,-1
+4,4,4,0,Boar,1,3,-1
+5,5,5,0,Boar,1,6,-1
 6,6,6,0,animal,5,10,60
-7,7,7,0,normal,1,1,-1
+7,7,7,0,normal,2,5,-1
 8,8,8,0,normal,1,1,-1
 9,9,9,0,normal,1,1,-1
 10,10,10,0,normal,1,1,-1

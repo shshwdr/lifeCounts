@@ -20,7 +20,7 @@ public class ClickToAttach : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(0))
         {
             if (GetComponent<NPC>().isLinked)
             {
