@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,7 +6,13 @@ using UnityEngine;
 public enum LinkType { spring, distance}
 public class GameManager : Singleton<GameManager>
 {
+    static public void  popup(Transform target)
+    {
 
+        Sequence mySequence = DOTween.Sequence();
+        mySequence.Append(target.DOScale(Vector3.one * 1.5f, 0.7f).SetUpdate(true))
+          .Append(target.DOScale(Vector3.one * 1f, 0.7f).SetUpdate(true)).SetUpdate(true);
+    }
     public LinkType linkType;
 
     public Dictionary<string, int> savedAnimals = new Dictionary<string, int>();

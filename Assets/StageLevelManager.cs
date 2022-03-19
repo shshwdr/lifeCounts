@@ -60,7 +60,11 @@ public class StageLevelManager : Singleton<StageLevelManager>
     {
         startNextLevel();
     }
-    
+    public void unlockNextLevel()
+    {
+
+        maxUnlockedLevel = Mathf.Max(currentLevelId+1, maxUnlockedLevel);
+    }
     public void addLevel()
     {
         currentLevelId++;

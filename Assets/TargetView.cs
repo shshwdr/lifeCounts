@@ -50,7 +50,9 @@ public class TargetView : MonoBehaviour
         {
             if (!isMainTargetChecked)
             {
-                mainTargetCheck.localScale = Vector3.one;
+                GameManager.popup(mainTargetCheck);
+                GameManager.popup(finishButton.transform);
+                //mainTargetCheck.localScale = Vector3.one;
                 isMainTargetChecked = true;
             }
         }
@@ -58,12 +60,13 @@ public class TargetView : MonoBehaviour
         {
             if (!isTargetChecked)
             {
-                targetCheck.localScale = Vector3.one;
+                GameManager.popup(targetCheck);
+                //targetCheck.localScale = Vector3.one;
                 isTargetChecked = true;
             }
         }
 
-        finishButton.gameObject.SetActive(stageManager.getMainTargetFinish());
+        //finishButton.gameObject.SetActive(stageManager.getMainTargetFinish());
     }
 
 

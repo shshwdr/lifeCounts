@@ -1,3 +1,4 @@
+using Doozy.Engine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,6 +14,7 @@ public class LevelSelectionView : MonoBehaviour
     public void showReward()
     {
         panel.SetActive(true);
+        GetComponent<UIView>().Show();
         var levelButtons = GetComponentsInChildren<LevelSelectionCell>(); 
         int i = 0;
         for (; i <= StageLevelManager.Instance.maxUnlockedLevel;i++)
@@ -28,6 +30,7 @@ public class LevelSelectionView : MonoBehaviour
     public void hideReward()
     {
 
+        GetComponent<UIView>().Hide();
         panel.SetActive(false);
     }
 
