@@ -16,6 +16,7 @@ public class LevelInfo
     public int mainTargetCount;
     public int targetCount;
     public float time;
+    public bool isTimeLevel { get { return time > 0; } }
 }
 public class StageLevelManager : Singleton<StageLevelManager>
 {
@@ -26,6 +27,18 @@ public class StageLevelManager : Singleton<StageLevelManager>
 
     float countDownTime = 0;
     float countDownTimer = 0;
+
+    Dictionary<string, int> levelToStarCount = new Dictionary<string, int>();
+
+    public int starCountInLevel(string sceneName)
+    {
+        if (!levelToStarCount.ContainsKey(sceneName))
+        {
+            Debug.LogWarning("star not generate");
+            return 0;
+        }
+        return levelToStarCount[sceneName];
+    }
 
     public bool shouldShowCountdown()
     {
@@ -77,6 +90,45 @@ public class StageLevelManager : Singleton<StageLevelManager>
         return rescuedMainCount >= currentLevel.mainTargetCount;
     }
 
+    public int starCount()
+    {
+        int showStarCount = 0;
+        if (getTargetFinish())
+        {
+            showStarCount = 3;
+        }else if (getMainTargetFinish())
+        {
+            var diff = currentLevel.targetCount - currentLevel.mainTargetCount;
+            var expectDiff = diff / 2;
+
+            if(currentLevel.targetCount - rescuedCount< expectDiff)
+            {
+                showStarCount = 2;
+
+            }
+            else
+            {
+                showStarCount = 1;
+            }
+
+        }
+        if (!levelToStarCount.ContainsKey(currentLevel.sceneName))
+        {
+            levelToStarCount[currentLevel.sceneName] = 0;
+        }
+        if(showStarCount> levelToStarCount[currentLevel.sceneName])
+        {
+            levelToStarCount[currentLevel.sceneName] = showStarCount;
+        }
+        return showStarCount;
+    }
+
+    public void selectLevel()
+    {
+
+        LevelSelectionView view = GameObject.FindObjectOfType<LevelSelectionView>(true);
+        view.showReward();
+    }
     public void finishLevel()
     {
         Time.timeScale = 0;
@@ -108,7 +160,16 @@ public class StageLevelManager : Singleton<StageLevelManager>
         Time.timeScale = 1;
         rescuedCount = 0;
         rescuedMainCount = 0;
-        MusicManager.Instance.playLevelMusic();
+        if (currentLevel.isTimeLevel)
+        {
+
+            MusicManager.Instance.playUrgentMusic();
+        }
+        else
+        {
+
+            MusicManager.Instance.playLevelMusic();
+        }
         countDownTime = currentLevel.time;
         countDownTimer = 0;
         SceneManager.LoadScene(currentLevel.sceneName);

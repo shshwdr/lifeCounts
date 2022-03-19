@@ -7,6 +7,7 @@ public class LevelSelectionCell : MonoBehaviour
 {
     public Button button;
     public Text text;
+    public Transform[] stars;
 
     public void init(LevelInfo info) {
         text.text = info.displayName;
@@ -14,6 +15,11 @@ public class LevelSelectionCell : MonoBehaviour
         {
             StageLevelManager.Instance.startLevel(info.id);
         });
+
+        for (int i = 0; i < StageLevelManager.Instance.starCountInLevel(info.sceneName); i++)
+        {
+            stars[i].gameObject.SetActive(true);
+        } 
     
     }
     // Start is called before the first frame update

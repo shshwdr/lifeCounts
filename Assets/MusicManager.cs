@@ -7,6 +7,7 @@ public class MusicManager : Singleton<MusicManager>
 
     public AudioClip levelMusic;
     public AudioClip homeMusic;
+    public AudioClip urgentMusic;
     AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,11 @@ public class MusicManager : Singleton<MusicManager>
     {
         audioSource = GetComponent<AudioSource>();
         startPlay(homeMusic);
+    }
+    public void playUrgentMusic()
+    {
+        audioSource = GetComponent<AudioSource>();
+        startPlay(urgentMusic);
     }
     public void playLevelMusic()
     {
