@@ -12,6 +12,8 @@ public class TargetView : MonoBehaviour
     public Text countdownLabel;
     public Button finishButton;
     GameObject finishTarget;
+    public AudioClip levelFinishClip;
+    public AudioClip levelFullyFinishClip;
 
     public Transform mainTargetCheck;
     public Transform targetCheck;
@@ -45,24 +47,37 @@ public class TargetView : MonoBehaviour
         mainTargetLabel.text = mainTargetText;
         var targetText = $"{stageManager.getRescuedCount()} / {levelInfo.targetCount}";
         targetLabel.text = targetText;
-
-        if (stageManager.getMainTargetFinish())
-        {
-            if (!isMainTargetChecked)
-            {
-                GameManager.popup(mainTargetCheck);
-                GameManager.popup(finishButton.transform);
-                //mainTargetCheck.localScale = Vector3.one;
-                isMainTargetChecked = true;
-            }
-        }
+        bool playedMainOne = false;
         if (stageManager.getTargetFinish())
         {
             if (!isTargetChecked)
             {
+                //if (!playedMainOne)
+                {
+
+                    playedMainOne = true;
+                    var audioSource = GameObject.Find("sfx").GetComponent<AudioSource>();
+                    audioSource.PlayOneShot(levelFullyFinishClip);
+                }
                 GameManager.popup(targetCheck);
                 //targetCheck.localScale = Vector3.one;
                 isTargetChecked = true;
+            }
+        }
+        if (stageManager.getMainTargetFinish())
+        {
+            if (!isMainTargetChecked)
+            {
+                if (!playedMainOne)
+                {
+
+                    var audioSource = GameObject.Find("sfx").GetComponent<AudioSource>();
+                    audioSource.PlayOneShot(levelFinishClip);
+                }
+                GameManager.popup(mainTargetCheck);
+                GameManager.popup(finishButton.transform);
+                //mainTargetCheck.localScale = Vector3.one;
+                isMainTargetChecked = true;
             }
         }
 

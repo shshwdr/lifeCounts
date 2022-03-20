@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class RewardView : MonoBehaviour
+public class RewardView : BaseView
 {
 
     public Button nextLevelButton;
@@ -15,12 +15,12 @@ public class RewardView : MonoBehaviour
     public GameObject panel;
     public Transform[] stars;
     public AudioClip[] starClips;
-    AudioSource audioSource;
     public Text description;
     public Text title;
 
-    public void showReward()
+    public override void showReward()
     {
+        base.showReward();
         GetComponent<UIView>().Show();
         panel.SetActive(true);
         if (StageLevelManager.Instance.getMainTargetFinish())
@@ -77,21 +77,18 @@ public class RewardView : MonoBehaviour
             // stars[i].transform
         }
     }
-    public void hideReward()
+    public override void hideReward()
     {
-
+        base.hideReward();
         GetComponent<UIView>().Hide();
         panel.SetActive(false);
     }
 
-    private void Awake()
-    {
-        audioSource = GetComponent<AudioSource>();
-    }
 
     // Start is called before the first frame update
-    void Start()
+    protected override void Start()
     {
+        base.Start();
         nextLevelButton.onClick.AddListener(delegate {
             if (StageLevelManager.Instance.getMainTargetFinish())
             {

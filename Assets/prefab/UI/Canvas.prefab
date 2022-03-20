@@ -2592,6 +2592,7 @@ GameObject:
   - component: {fileID: 310546748}
   - component: {fileID: 310546747}
   - component: {fileID: 310546751}
+  - component: {fileID: 161263306}
   m_Layer: 5
   m_Name: setting
   m_TagString: Untagged
@@ -3031,9 +3032,9 @@ MonoBehaviour:
           m_Calls: []
       GameEvents: []
       SoundData:
-        SoundSource: 0
+        SoundSource: 1
         DatabaseName: General
-        SoundName: No Sound
+        SoundName: 
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
     PresetCategory: Organic
@@ -3467,9 +3468,9 @@ MonoBehaviour:
           m_Calls: []
       GameEvents: []
       SoundData:
-        SoundSource: 0
+        SoundSource: 1
         DatabaseName: General
-        SoundName: No Sound
+        SoundName: 
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
     PresetCategory: Organic
@@ -3493,12 +3494,110 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fd880a6bf2e8a34b843ccaaa4051100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showAudio: {fileID: 8300000, guid: 5ad5e39a19d9ca84099d91b0fe64274f, type: 3}
+  hideAudio: {fileID: 8300000, guid: 607bdc451cb2a2540ac6190942da7ad7, type: 3}
   nextLevelButton: {fileID: 1721432296}
   returnButton: {fileID: 836469045}
   levelSelectionButton: {fileID: 2104286991}
   resumeButton: {fileID: 1706380661}
   levelText: {fileID: 464303650}
   panel: {fileID: 310546745}
+--- !u!82 &161263306
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 310546745}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &390458051
 GameObject:
   m_ObjectHideFlags: 0
@@ -22769,6 +22868,7 @@ GameObject:
   - component: {fileID: 694745002}
   - component: {fileID: 694745003}
   - component: {fileID: 694745005}
+  - component: {fileID: 2865767478895392978}
   m_Layer: 5
   m_Name: rewardView
   m_TagString: Untagged
@@ -22846,6 +22946,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 067e6dc4aaaf85b47904eb86b2196e90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showAudio: {fileID: 8300000, guid: 5ad5e39a19d9ca84099d91b0fe64274f, type: 3}
+  hideAudio: {fileID: 8300000, guid: 607bdc451cb2a2540ac6190942da7ad7, type: 3}
   nextLevelButton: {fileID: 653801549046811642}
   returnButton: {fileID: 653801547627920155}
   levelSelectionButton: {fileID: 653801548649575492}
@@ -22855,6 +22957,10 @@ MonoBehaviour:
   - {fileID: 653801548141229264}
   - {fileID: 653801547268798565}
   - {fileID: 653801548048962118}
+  starClips:
+  - {fileID: 8300000, guid: d3bb7ca679416914d8801cbb707257c3, type: 3}
+  - {fileID: 8300000, guid: 41498e8824d81054f8134b55fbd85dba, type: 3}
+  - {fileID: 8300000, guid: d7eeec7029f22ee4783c185e749a57d2, type: 3}
   description: {fileID: 9041555975496362401}
   title: {fileID: 653801547446130572}
 --- !u!223 &694745004
@@ -23231,9 +23337,9 @@ MonoBehaviour:
           m_Calls: []
       GameEvents: []
       SoundData:
-        SoundSource: 0
+        SoundSource: 1
         DatabaseName: General
-        SoundName: No Sound
+        SoundName: 
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
     PresetCategory: Organic
@@ -23667,9 +23773,9 @@ MonoBehaviour:
           m_Calls: []
       GameEvents: []
       SoundData:
-        SoundSource: 0
+        SoundSource: 1
         DatabaseName: General
-        SoundName: No Sound
+        SoundName: 
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
     PresetCategory: Organic
@@ -23681,6 +23787,102 @@ MonoBehaviour:
   UseCustomStartAnchoredPosition: 1
   ViewCategory: Custom
   ViewName: reward
+--- !u!82 &2865767478895392978
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 653801548605820060}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &653801548638767130
 GameObject:
   m_ObjectHideFlags: 0
@@ -26424,10 +26626,10 @@ MonoBehaviour:
           m_Calls: []
       GameEvents: []
       SoundData:
-        SoundSource: 0
+        SoundSource: 1
         DatabaseName: General
-        SoundName: No Sound
-        AudioClip: {fileID: 0}
+        SoundName: 
+        AudioClip: {fileID: 8300000, guid: 0b2d9f1b969eeac498a92280ff1d36cf, type: 3}
         OutputAudioMixerGroup: {fileID: 0}
     PresetCategory: Organic
     PresetName: BlowUp
@@ -28678,6 +28880,7 @@ GameObject:
   - component: {fileID: 212404380}
   - component: {fileID: 212404381}
   - component: {fileID: 212404383}
+  - component: {fileID: 1564267797}
   m_Layer: 5
   m_Name: level selection
   m_TagString: Untagged
@@ -28756,6 +28959,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b50a8d27dccc6b4f8e739faa9fd959f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showAudio: {fileID: 8300000, guid: 5ad5e39a19d9ca84099d91b0fe64274f, type: 3}
+  hideAudio: {fileID: 8300000, guid: 607bdc451cb2a2540ac6190942da7ad7, type: 3}
   nextLevelButton: {fileID: 932127497163560328}
   returnButton: {fileID: 932127498654544390}
   levelSelectionButton: {fileID: 932127498368775829}
@@ -29135,9 +29340,9 @@ MonoBehaviour:
           m_Calls: []
       GameEvents: []
       SoundData:
-        SoundSource: 0
+        SoundSource: 1
         DatabaseName: General
-        SoundName: No Sound
+        SoundName: 
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
     PresetCategory: Organic
@@ -29571,9 +29776,9 @@ MonoBehaviour:
           m_Calls: []
       GameEvents: []
       SoundData:
-        SoundSource: 0
+        SoundSource: 1
         DatabaseName: General
-        SoundName: No Sound
+        SoundName: 
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
     PresetCategory: Organic
@@ -29585,6 +29790,102 @@ MonoBehaviour:
   UseCustomStartAnchoredPosition: 1
   ViewCategory: Custom
   ViewName: level
+--- !u!82 &1564267797
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932127496853739029}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &932127496868004150
 GameObject:
   m_ObjectHideFlags: 0
@@ -36130,6 +36431,8 @@ MonoBehaviour:
   targetLabel: {fileID: 726857743220364862}
   countdownLabel: {fileID: 2186497110067056392}
   finishButton: {fileID: 2089562430909441749}
+  levelFinishClip: {fileID: 8300000, guid: 66ec7d8b6c9d55a45b5437095a4b3475, type: 3}
+  levelFullyFinishClip: {fileID: 8300000, guid: e382db59016c1f340a7e24cf7d0508b3, type: 3}
   mainTargetCheck: {fileID: 3699257685262060866}
   targetCheck: {fileID: 969259509}
 --- !u!1 &8665628128244571484

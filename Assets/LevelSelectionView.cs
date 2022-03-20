@@ -4,15 +4,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LevelSelectionView : MonoBehaviour
+public class LevelSelectionView : BaseView
 {
     public Button nextLevelButton;
     public Button returnButton;
     public Button levelSelectionButton;
     public Text levelText;
     public GameObject panel;
-    public void showReward()
+    public override void showReward()
     {
+        base.showReward();
         panel.SetActive(true);
         GetComponent<UIView>().Show();
         var levelButtons = GetComponentsInChildren<LevelSelectionCell>(); 
@@ -27,16 +28,18 @@ public class LevelSelectionView : MonoBehaviour
             levelButtons[i].gameObject.SetActive(false);
         }
     }
-    public void hideReward()
+    public override void hideReward()
     {
+        base.hideReward();
 
         GetComponent<UIView>().Hide();
         panel.SetActive(false);
     }
 
     // Start is called before the first frame update
-    void Start()
+    protected override void Start()
     {
+        base.Start();
         nextLevelButton.onClick.AddListener(delegate { StageLevelManager.Instance.startNextLevel(); });
         returnButton.onClick.AddListener(delegate { hideReward(); });
     }

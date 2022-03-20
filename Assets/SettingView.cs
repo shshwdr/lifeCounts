@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SettingView : MonoBehaviour
+public class SettingView : BaseView
 {
 
     public Button nextLevelButton;
@@ -13,8 +13,10 @@ public class SettingView : MonoBehaviour
     public Button resumeButton;
     public Text levelText;
     public GameObject panel;
-    public void showReward()
+
+    public override void showReward()
     {
+        base.showReward();
         Time.timeScale = 0;
         GetComponent<UIView>().Show();
         panel.SetActive(true);
@@ -37,8 +39,9 @@ public class SettingView : MonoBehaviour
         GameManager.Instance.saveAnimalInLevel();
 
     }
-    public void hideReward()
+    public override void hideReward()
     {
+        base.hideReward();
         Time.timeScale = 1;
 
         GetComponent<UIView>().Hide();
@@ -46,8 +49,9 @@ public class SettingView : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
+    protected override void Start()
     {
+        base.Start();
         nextLevelButton.onClick.AddListener(delegate {
             StageLevelManager.Instance.startNextLevel();
         });

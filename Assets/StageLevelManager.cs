@@ -33,6 +33,8 @@ public class StageLevelManager : Singleton<StageLevelManager>
 
     bool isHome;
 
+
+    AudioSource audioSource;
     public bool isGameFinished { get { return isFinished; } }
     public bool isInHome { get { return isHome; } }
 
@@ -215,8 +217,10 @@ public class StageLevelManager : Singleton<StageLevelManager>
         countDownTimer = 0;
         SceneManager.LoadScene(currentLevel.sceneName);
     }
-    private void Awake()
+    protected  void Awake()
     {
+        //base.Awake();
+        //audioSource = GetComponent<AudioSource>();
         levelInfoList = CsvUtil.LoadObjects<LevelInfo>("Level");
         int id = 0;
         foreach (var info in levelInfoList)
@@ -244,7 +248,19 @@ public class StageLevelManager : Singleton<StageLevelManager>
             restart();
         }
 
-        if(countDownTime > 0)
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            currentLevelId++;
+            restart();
+        }
+
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            currentLevelId--;
+            restart();
+        }
+
+        if (countDownTime > 0)
         {
             countDownTimer += Time.deltaTime;
             EventPool.Trigger<int>("updateTimer", (int)(countDownTime - countDownTimer));

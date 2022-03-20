@@ -92,7 +92,7 @@ public class CharacterController2D : MonoBehaviour
 		//audioSource.clip =  landClips[Random.Range(0,landClips.Length)];
 		//audioSource.pitch = Random.Range(0.5f, 1f);
 		//audioSource.volume = Random.Range(0.5f, 1.5f);
-		audioSource.PlayOneShot(landClips[Random.Range(0, landClips.Length)], Random.Range(0.5f, 1f));
+		audioSource.PlayOneShot(landClips[Random.Range(0, landClips.Length)], Random.Range(0.8f, 1f));
 	}
 
 	private void Awake()
@@ -264,7 +264,11 @@ public class CharacterController2D : MonoBehaviour
 			//m_Rigidbody2D.AddForce((Vector2.zero - (Vector2)transform.position).normalized * m_JumpForce/*new Vector2(0f, m_JumpForce)*/);
 			jumpDir = Vector2.zero;
 			jumpCoolDownTimer = 0;
-			audioSource.PlayOneShot(jumpClip);
+            if (jumpClip)
+            {
+
+				audioSource.PlayOneShot(jumpClip);
+			}
 		}
 	}
 
