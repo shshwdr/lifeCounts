@@ -6,6 +6,8 @@ using UnityEngine;
 public class NPC : MonoBehaviour
 {
     public bool isLinked = false;
+    bool isReportedLink = false;
+    bool isInMud = false;
     CinemachineTargetGroup targetGroup;
     public string animalType;
     Animator animator;
@@ -54,12 +56,33 @@ public class NPC : MonoBehaviour
         animator.SetTrigger("link");
         rb.freezeRotation = false;
         rb.bodyType = RigidbodyType2D.Dynamic;
-        StageLevelManager.Instance.linkAnimal(animalType);
+        if (!isInMud)
+        {
+            isReportedLink = true;
+            StageLevelManager.Instance.linkAnimal(animalType);
+        }
         Debug.Log("link");
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "mud")
+        {
+            isInMud = false;
+             if(isLinked && !isReportedLink)
+            {
+                isReportedLink = true;
+                StageLevelManager.Instance.linkAnimal(animalType);
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.tag == "mud")
+        {
+            isInMud = true;
+        }
         if (isLinked)
         {
             return;

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Mud : MonoBehaviour
 {
 
-    public Transform center;
+    //public Transform center;
     public float dragModifier = 5;
     public float massModifier = 15;
 
