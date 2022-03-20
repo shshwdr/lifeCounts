@@ -104,6 +104,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4207871266040400011, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
+      propertyPath: linkSound
+      value: 
+      objectReference: {fileID: 8300000, guid: f0a6d891e13a69642947b3b2dcae173b, type: 3}
+    - target: {fileID: 4207871266040400011, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
       propertyPath: animalType
       value: Bird
       objectReference: {fileID: 0}
@@ -216,4 +220,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
   clickForce: 300
-  flySound: {fileID: 0}
+  flySound: {fileID: 8300000, guid: e870bcf054e64214281d2646a5323956, type: 3}

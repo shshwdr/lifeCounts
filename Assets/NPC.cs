@@ -12,10 +12,13 @@ public class NPC : MonoBehaviour
     public string animalType;
     Animator animator;
     Rigidbody2D rb;
+    public AudioClip linkSound;
+    AudioSource AudioSource;
     private void Awake()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        AudioSource = GetComponent<AudioSource>();
     }
     // Start is called before the first frame update
     void Start()
@@ -60,6 +63,10 @@ public class NPC : MonoBehaviour
         {
             isReportedLink = true;
             StageLevelManager.Instance.linkAnimal(animalType);
+        }
+        if (linkSound)
+        {
+            AudioSource.PlayOneShot(linkSound);
         }
        // Debug.Log("link");
     }

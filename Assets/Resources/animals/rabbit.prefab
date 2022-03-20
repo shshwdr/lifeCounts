@@ -108,6 +108,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4207871266040400011, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
+      propertyPath: linkSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 2f22b5412ac80cc4ca4a3c861ca49ea0, type: 3}
+    - target: {fileID: 4207871266040400011, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
       propertyPath: animalType
       value: Rabbit
       objectReference: {fileID: 0}
