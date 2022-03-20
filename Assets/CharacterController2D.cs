@@ -89,7 +89,7 @@ public class CharacterController2D : MonoBehaviour
     {
 
 		audioSource.clip =  landClips[Random.Range(0,landClips.Length)];
-		audioSource.pitch = Random.Range(0.5f, 1f);
+		//audioSource.pitch = Random.Range(0.5f, 1f);
 		audioSource.volume = Random.Range(0.5f, 1.5f);
 		audioSource.Play();
 	}
