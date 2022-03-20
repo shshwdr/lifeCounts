@@ -58,6 +58,13 @@ public class RewardView : BaseView
             title.text = "Try Again";
             description.text = "Lifes are waiting for you to be saved!";
         }
+
+        if(StageLevelManager.Instance.currentLevelId == 0)
+        {
+            nextLevelButton.gameObject.SetActive(false);
+
+            levelSelectionButton.gameObject.SetActive(false);
+        }
         StartCoroutine(showStars());
     }
 

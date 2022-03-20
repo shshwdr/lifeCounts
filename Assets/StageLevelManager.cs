@@ -114,9 +114,10 @@ public class StageLevelManager : Singleton<StageLevelManager>
         }else if (getMainTargetFinish())
         {
             var diff = currentLevel.targetCount - currentLevel.mainTargetCount;
-            var expectDiff = diff / 2;
+            var expectDiff = (diff+1) / 2;
 
-            if(currentLevel.targetCount - rescuedCount< expectDiff)
+            Debug.Log($"stars diff {diff}, expect {expectDiff}, compare {currentLevel.targetCount - rescuedCount}");
+            if(currentLevel.targetCount - rescuedCount<= expectDiff)
             {
                 showStarCount = 2;
 

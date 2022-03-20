@@ -31,7 +31,7 @@ public class CharacterController2D : MonoBehaviour
 
 	AudioSource audioSource;
 	public AudioClip[] landClips;
-	public AudioClip jumpClip;
+	public AudioClip[] jumpClips;
 
 	[System.Serializable]
 	public class BoolEvent : UnityEvent<bool> { }
@@ -264,10 +264,10 @@ public class CharacterController2D : MonoBehaviour
 			//m_Rigidbody2D.AddForce((Vector2.zero - (Vector2)transform.position).normalized * m_JumpForce/*new Vector2(0f, m_JumpForce)*/);
 			jumpDir = Vector2.zero;
 			jumpCoolDownTimer = 0;
-            if (jumpClip)
+            //if (jumpClip)
             {
 
-				audioSource.PlayOneShot(jumpClip);
+				audioSource.PlayOneShot(jumpClips[Random.Range(0,jumpClips.Length)]);
 			}
 		}
 	}

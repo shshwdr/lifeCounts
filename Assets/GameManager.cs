@@ -17,14 +17,14 @@ public class GameManager : Singleton<GameManager>
     }
     public LinkType linkType;
 
-    public Dictionary<string, int> savedAnimals = new Dictionary<string, int>()
-    {
-        {"Wolf",2 },
-        {"Bird",2 },
-        {"Boar",2 },
-        {"Rabbit",2 },
-        {"Hamming Bird",2 },
-    };
+    public Dictionary<string, int> savedAnimals = new Dictionary<string, int>();
+    //{
+    //    {"Wolf",2 },
+    //    {"Bird",2 },
+    //    {"Boar",2 },
+    //    {"Rabbit",2 },
+    //    {"Hamming Bird",2 },
+    //};
 
     //protected override void Awake()
     //{

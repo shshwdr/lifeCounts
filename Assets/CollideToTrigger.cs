@@ -7,7 +7,7 @@ public class CollideToTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetComponent<PlayerController>())
+        if (collision.GetComponent<CharacterController2D>())
         {
 
             foreach (Trigger trigger in GetComponents<Trigger>())

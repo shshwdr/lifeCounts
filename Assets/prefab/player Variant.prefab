@@ -178,6 +178,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4192571625674442364, guid: 7b58aba35a8b73f498555addda716a9c, type: 3}
+      propertyPath: jumpClips.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4192571625674442364, guid: 7b58aba35a8b73f498555addda716a9c, type: 3}
+      propertyPath: jumpClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1357671d642a7594ab8cc61a8573df7b, type: 3}
+    - target: {fileID: 4192571625674442364, guid: 7b58aba35a8b73f498555addda716a9c, type: 3}
+      propertyPath: jumpClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9d6b460c34c6b1b46a4152fc1acb6ac6, type: 3}
+    - target: {fileID: 4192571625674442364, guid: 7b58aba35a8b73f498555addda716a9c, type: 3}
+      propertyPath: jumpClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: ffedec223876baf4bab17f9ca6a4d8c8, type: 3}
     - target: {fileID: 6150131576625719290, guid: 7b58aba35a8b73f498555addda716a9c, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
@@ -255,6 +271,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1003455746696570639, guid: 7b58aba35a8b73f498555addda716a9c, type: 3}
   m_PrefabInstance: {fileID: 1465836274841329595}
   m_PrefabAsset: {fileID: 0}
+--- !u!58 &625323698224277207
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854163616373209274}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.6
 --- !u!255 &8424790048791735395
 FixedJoint2D:
   m_ObjectHideFlags: 0
@@ -286,19 +318,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.05
---- !u!58 &625323698224277207
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1854163616373209274}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.6

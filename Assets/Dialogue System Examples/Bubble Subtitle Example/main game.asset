@@ -998,7 +998,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Hey calm down! I'm a forest ranger, I'll help every life in this forest.
+        value: Hey calm down! I'm a forest ranger, I want to help every life in this
+          forest.
         type: 0
         typeString: 
       - title: Sequence
@@ -1137,7 +1138,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 68.3544}
+    canvasScrollPosition: {x: 0, y: 7.594925}
     canvasZoom: 0.7900002
   - id: 3
     fields:
@@ -3191,8 +3192,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 7.446808, y: 46.80851}
-    canvasZoom: 0.94000006
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.9100001
   syncInfo:
     syncActors: 0
     syncItems: 0

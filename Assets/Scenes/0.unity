@@ -1189,9 +1189,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4469642224794687993, guid: 61bd97f6441eb5c438f763be1d7f65df, type: 3}
       propertyPath: m_Text
-      value: 'AS / Left Right Arrow To Move
+      value: 'A/D or Arrow Key to move left and right
 
-        Space / W / Up  To Jump'
+        Space / W / Up  To
+        Jump'
       objectReference: {fileID: 0}
     - target: {fileID: 4469642224794687993, guid: 61bd97f6441eb5c438f763be1d7f65df, type: 3}
       propertyPath: m_FontData.m_Font
@@ -1231,7 +1232,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4469642226067951070, guid: 61bd97f6441eb5c438f763be1d7f65df, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 600
+      value: 700
       objectReference: {fileID: 0}
     - target: {fileID: 4469642226067951070, guid: 61bd97f6441eb5c438f763be1d7f65df, type: 3}
       propertyPath: m_SizeDelta.y
