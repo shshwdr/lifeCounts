@@ -62,7 +62,7 @@ public class NPC : MonoBehaviour
 
             }
 
-            if (state)
+            //if (state)
             {
 
                 if (GetComponent<MoveWithMouse>())

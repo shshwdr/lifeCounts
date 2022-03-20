@@ -24,6 +24,7 @@ public class ClickToAttach : MonoBehaviour
         {
             if (GetComponent<NPC>().isLinked)
             {
+                updateState();
             }
             
         }
