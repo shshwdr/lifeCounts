@@ -33,12 +33,18 @@ public class MoveWithMouse : MonoBehaviour
         {
             rb.AddForce(mouseDir * clickForce*Time.deltaTime);
         }
+    }
+    private void Update()
+    {
+
         if (Input.GetMouseButtonDown(0))
         {
+            //Debug.Log("start flap");
             audioSource.Play();
         }
         if (Input.GetMouseButtonUp(0))
         {
+            //Debug.Log("end flap");
             audioSource.Stop();
         }
     }

@@ -160,7 +160,9 @@ MonoBehaviour:
       m_Calls: []
   landClips:
   - {fileID: 8300000, guid: 686f1f11b7736024aaa3720decfd87a2, type: 3}
-  - {fileID: 8300000, guid: 69228316898956846ae8c125128d6702, type: 3}
+  - {fileID: 8300000, guid: 3e855d27f0690a84e978fc8f8a4a5134, type: 3}
+  - {fileID: 8300000, guid: ee3c7f9a89518454fa922cb27d048901, type: 3}
+  - {fileID: 8300000, guid: c9a171d077af99f4d9005dcb9f4bb5a1, type: 3}
   jumpClip: {fileID: 8300000, guid: 1357671d642a7594ab8cc61a8573df7b, type: 3}
   OnCrouchEvent:
     m_PersistentCalls:
