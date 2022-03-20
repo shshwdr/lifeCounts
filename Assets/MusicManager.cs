@@ -6,6 +6,7 @@ public class MusicManager : Singleton<MusicManager>
 {
 
     public AudioClip levelMusic;
+    public AudioClip levelMusic2;
     public AudioClip homeMusic;
     public AudioClip urgentMusic;
     AudioSource audioSource;
@@ -38,6 +39,11 @@ public class MusicManager : Singleton<MusicManager>
     {
         audioSource = GetComponent<AudioSource>();
         startPlay(levelMusic);
+    }
+    public void playLevelMusic2()
+    {
+        audioSource = GetComponent<AudioSource>();
+        startPlay(levelMusic2);
     }
 
     // Update is called once per frame

@@ -211,8 +211,15 @@ public class StageLevelManager : Singleton<StageLevelManager>
         }
         else
         {
+            if (currentLevel.id < 6)
+            {
 
-            MusicManager.Instance.playLevelMusic();
+                MusicManager.Instance.playLevelMusic();
+            }
+            else
+            {
+                MusicManager.Instance.playLevelMusic2();
+            }
         }
         countDownTime = currentLevel.time;
         countDownTimer = 0;
@@ -261,13 +268,14 @@ public class StageLevelManager : Singleton<StageLevelManager>
             restart();
         }
 
-        if (countDownTime > 0)
+        if (countDownTime > 0 && !isFinished)
         {
             countDownTimer += Time.deltaTime;
             EventPool.Trigger<int>("updateTimer", (int)(countDownTime - countDownTimer));
             if (countDownTimer >= countDownTime)
             {
                 finishLevel();
+
             }
         }
     }

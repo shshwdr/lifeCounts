@@ -29,7 +29,8 @@ public class RewardView : BaseView
             StageLevelManager.Instance.unlockNextLevel();
         }
         //StageLevelManager.Instance.addLevel();
-        if (StageLevelManager.Instance.hasNextLevel())
+        var test = StageLevelManager.Instance.hasNextLevel() || !StageLevelManager.Instance.getMainTargetFinish();
+        if (test)
         {
             nextLevelButton.gameObject.SetActive(true);
         }

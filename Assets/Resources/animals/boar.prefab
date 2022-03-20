@@ -226,5 +226,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 171e8d1174fcfaf43a3ae9eeda9859dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smashVelocity: 10
+  smashVelocity: 5
   smashClip: {fileID: 8300000, guid: 6b88e3f5098b71341bfebe35b5c95c19, type: 3}

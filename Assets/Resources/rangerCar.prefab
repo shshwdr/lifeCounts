@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c5ca46783fb07a46b28d874b1de624b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rangeShowDistance: 20
+  rangeShowDistance: 15
   moveTime: 2
 --- !u!50 &113526452
 Rigidbody2D:
