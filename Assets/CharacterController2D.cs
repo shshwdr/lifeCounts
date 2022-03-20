@@ -88,10 +88,10 @@ public class CharacterController2D : MonoBehaviour
 	void playLandClip()
     {
 
-		audioSource.clip =  landClips[Random.Range(0,landClips.Length)];
+		//audioSource.clip =  landClips[Random.Range(0,landClips.Length)];
 		//audioSource.pitch = Random.Range(0.5f, 1f);
-		audioSource.volume = Random.Range(0.5f, 1.5f);
-		audioSource.Play();
+		//audioSource.volume = Random.Range(0.5f, 1.5f);
+		audioSource.PlayOneShot(landClips[Random.Range(0, landClips.Length)]);
 	}
 
 	private void Awake()

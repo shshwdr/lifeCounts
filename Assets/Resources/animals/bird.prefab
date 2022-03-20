@@ -25,7 +25,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 647955501256251412, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
       propertyPath: m_Name
-      value: bird
+      value: Bird
       objectReference: {fileID: 0}
     - target: {fileID: 647955501256251412, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
       propertyPath: m_IsActive
@@ -107,6 +107,14 @@ PrefabInstance:
       propertyPath: animalType
       value: Bird
       objectReference: {fileID: 0}
+    - target: {fileID: 4516267435233908286, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4516267435233908286, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: e870bcf054e64214281d2646a5323956, type: 3}
     - target: {fileID: 5785812302737228005, guid: 44a355f42cead83478749f6c27aa297a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -208,3 +216,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
   clickForce: 300
+  flySound: {fileID: 0}

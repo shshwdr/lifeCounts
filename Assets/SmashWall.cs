@@ -6,14 +6,16 @@ public class SmashWall : MonoBehaviour
 {
     Rigidbody2D rb;
     public float smashVelocity = 10f;
+    AudioSource audioSource;
+    public AudioClip smashClip;
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
     }
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -30,6 +32,7 @@ public class SmashWall : MonoBehaviour
             if (rb.velocity.magnitude > smashVelocity)
             {
                 Destroy(collision.gameObject);
+                audioSource.PlayOneShot(smashClip);
             }
         }
     }

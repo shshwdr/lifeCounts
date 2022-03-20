@@ -223,3 +223,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   smashVelocity: 10
+  smashClip: {fileID: 8300000, guid: 6b88e3f5098b71341bfebe35b5c95c19, type: 3}
