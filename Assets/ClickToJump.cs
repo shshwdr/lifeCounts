@@ -30,15 +30,15 @@ public class ClickToJump : MonoBehaviour
 
             controller2d.m_JumpForce = linkedJumpForce;
         }
-        if (Input.GetMouseButtonDown(1))
-        {
-            if (GetComponent<NPC>().isLinked)
-            {
+        //if (Input.GetMouseButtonDown(1))
+        //{
+        //    if (GetComponent<NPC>().isLinked)
+        //    {
 
-                isAttached = !isAttached;
-            }
+        //        isAttached = !isAttached;
+        //    }
 
-        }
+        //}
         if (isAttached)
         {
             GetComponent<CharacterController2D>().Move(0, false, true);
