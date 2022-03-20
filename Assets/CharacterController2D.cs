@@ -29,6 +29,9 @@ public class CharacterController2D : MonoBehaviour
 
 	public UnityEvent OnLandEvent;
 
+	AudioSource audioSource;
+	public AudioClip[] landClips;
+
 	[System.Serializable]
 	public class BoolEvent : UnityEvent<bool> { }
 
@@ -82,10 +85,19 @@ public class CharacterController2D : MonoBehaviour
 	//	}
 	//}
 
+	void playLandClip()
+    {
+
+		audioSource.clip =  landClips[Random.Range(0,landClips.Length)];
+		audioSource.pitch = Random.Range(0.5f, 1f);
+		audioSource.volume = Random.Range(0.5f, 1.5f);
+		audioSource.Play();
+	}
+
 	private void Awake()
 	{
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
-
+		audioSource = GetComponent<AudioSource>();
 		if (OnLandEvent == null)
 			OnLandEvent = new UnityEvent();
 
@@ -117,8 +129,12 @@ public class CharacterController2D : MonoBehaviour
 				//}
 				m_Grounded = true;
 				if (!wasGrounded)
-					OnLandEvent.Invoke();
-			}
+                {
+					playLandClip();
+                    //OnLandEvent.Invoke();
+
+                }
+            }
 		}
 
 		//colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, m_GroundCheck.GetComponent<CircleCollider2D>().radius * transform.localScale.x + 0.1f, m_WhatIsJumpDir);
@@ -163,6 +179,15 @@ public class CharacterController2D : MonoBehaviour
 			}
 		}
 	}
+
+  //  private void OnCollisionEnter2D(Collision2D collision)
+  //  {
+  //      if (m_Rigidbody2D.velocity.magnitude > 3 || (collision.collider.GetComponent<Rigidbody2D>() && collision.collider.GetComponent<Rigidbody2D>().velocity.magnitude>3))
+  //      {
+		//	audioSource.clip = landClip;
+		//	audioSource.Play();
+		//}
+  //  }
 
 
 	public void Move(float move, bool crouch, bool jump)
@@ -233,7 +258,7 @@ public class CharacterController2D : MonoBehaviour
 		if (m_Grounded && jump && jumpCoolDownTimer>=jumpCoolDown)
 		{
 			// Add a vertical force to the player.
-			m_Grounded = false;
+			//m_Grounded = false;
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
 			//m_Rigidbody2D.AddForce((Vector2.zero - (Vector2)transform.position).normalized * m_JumpForce/*new Vector2(0f, m_JumpForce)*/);
 			jumpDir = Vector2.zero;

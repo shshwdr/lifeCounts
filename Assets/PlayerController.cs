@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        controller = GetComponent<CharacterController2D>();
+        controller = GetComponent<CharacterController2D>(); 
     }
     // Start is called before the first frame update
     void Start()
