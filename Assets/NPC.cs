@@ -61,7 +61,7 @@ public class NPC : MonoBehaviour
             isReportedLink = true;
             StageLevelManager.Instance.linkAnimal(animalType);
         }
-        Debug.Log("link");
+       // Debug.Log("link");
     }
 
     private void OnTriggerExit2D(Collider2D collision)

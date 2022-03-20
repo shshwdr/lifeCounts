@@ -2820,7 +2820,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
+        x: 29
         y: 70
         width: 160
         height: 30
