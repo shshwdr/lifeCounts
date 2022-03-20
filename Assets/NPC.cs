@@ -14,11 +14,15 @@ public class NPC : MonoBehaviour
     Rigidbody2D rb;
     public AudioClip linkSound;
     AudioSource AudioSource;
+    public float triggerAbilityTime = 5f;
+    public float triggerAbilityTimer = 0;
+    bool state = false;
     private void Awake()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         AudioSource = GetComponent<AudioSource>();
+        triggerAbilityTime = Random.Range(3, 6);
     }
     // Start is called before the first frame update
     void Start()
@@ -30,11 +34,44 @@ public class NPC : MonoBehaviour
     void Update()
     {
         //test
-        if (Input.GetKeyDown(KeyCode.I))
-        {
+        //if (Input.GetKeyDown(KeyCode.I))
+        //{
 
-            animator.SetTrigger("unlink");
+        //    animator.SetTrigger("unlink");
+        //}
+
+        if (StageLevelManager.Instance.isInHome)
+        {
+            if (Mathf.Abs(rb.velocity.x) > 1f)
+            {
+                GetComponent<Animator>().SetTrigger("link");
+            }else if(Mathf.Abs(rb.velocity.x) < 0.01f)
+            {
+
+                GetComponent<Animator>().SetTrigger("unlink");
+            }
+            triggerAbilityTimer += Time.deltaTime;
+            if (triggerAbilityTimer >= triggerAbilityTime)
+            {
+                triggerAbilityTimer = 0;
+                if (GetComponent<ClickToAttach>())
+                {
+                    GetComponent<ClickToAttach>().updateState();
+                }
+                state = !state;
+
+            }
+
+            if (state)
+            {
+
+                if (GetComponent<MoveWithMouse>())
+                {
+                    GetComponent<MoveWithMouse>().move();
+                }
+            }
         }
+
     }
 
     public void link()
@@ -95,6 +132,10 @@ public class NPC : MonoBehaviour
             return;
         }
         if (StageLevelManager.Instance.isGameFinished)
+        {
+            return;
+        }
+        if (StageLevelManager.Instance.isInHome)
         {
             return;
         }

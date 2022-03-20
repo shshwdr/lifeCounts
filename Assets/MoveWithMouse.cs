@@ -24,14 +24,23 @@ public class MoveWithMouse : MonoBehaviour
             return;
 
         }
+        if (Input.GetMouseButton(0))
+        {
+
+            move();
+        }
+    }
+
+    public void move()
+    {
+
         var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         var mouseDir = mousePos - gameObject.transform.position;
         mouseDir.z = 0.0f;
         mouseDir = mouseDir.normalized;
 
-        if (Input.GetMouseButton(0))
         {
-            rb.AddForce(mouseDir * clickForce*Time.deltaTime);
+            rb.AddForce(mouseDir * clickForce * Time.deltaTime);
         }
     }
     private void Update()

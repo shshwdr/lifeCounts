@@ -24,11 +24,16 @@ public class ClickToAttach : MonoBehaviour
         {
             if (GetComponent<NPC>().isLinked)
             {
-                isAttached = !isAttached;
-                StartCoroutine( updateAttach());
             }
             
         }
+    }
+
+    public void updateState()
+    {
+
+        isAttached = !isAttached;
+        StartCoroutine(updateAttach());
     }
 
     IEnumerator updateAttach()

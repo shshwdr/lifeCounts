@@ -177,7 +177,7 @@ public class StageLevelManager : Singleton<StageLevelManager>
             return;
         }
         rescuedCount++;
-        if(type == currentLevel.mainTarget || currentLevel.mainTarget == "animal")
+        if(type == currentLevel.mainTarget || currentLevel.mainTarget == "Animal")
         {
             rescuedMainCount++;
         }

@@ -29,7 +29,7 @@ public class Home : MonoBehaviour
                     found = true;
                     GameObject ob = Instantiate(Resources.Load<GameObject>("animals/"+pair.Key), positions[i].position,Quaternion.identity);
                     i++;
-                    ob.GetComponent<NPC>().isLinked = true;
+                    //ob.GetComponent<NPC>().isLinked = true;
                 }
             }
             tier++;
