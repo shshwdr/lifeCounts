@@ -14,6 +14,8 @@ public class RewardView : MonoBehaviour
     public Text levelText;
     public GameObject panel;
     public Transform[] stars;
+    public AudioClip[] starClips;
+    AudioSource audioSource;
     public Text description;
     public Text title;
 
@@ -66,6 +68,7 @@ public class RewardView : MonoBehaviour
         for (int i = 0; i < starCount; i++)
         {
             GameManager.popup(stars[i],true);
+            audioSource.PlayOneShot(starClips[i]);
             yield return new WaitForSecondsRealtime(0.7f);
             //Sequence mySequence = DOTween.Sequence();
             //mySequence.Append(stars[i].DOScale(Vector3.one*1.5f, 0.7f))
@@ -79,6 +82,11 @@ public class RewardView : MonoBehaviour
 
         GetComponent<UIView>().Hide();
         panel.SetActive(false);
+    }
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Start is called before the first frame update
