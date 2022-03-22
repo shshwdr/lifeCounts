@@ -16,7 +16,7 @@ public class RangeCar : MonoBehaviour
     {
         var player = GameObject.FindObjectOfType<PlayerController>();
         transform.position = player.transform.position - new Vector3(rangeShowDistance, 0, 0);
-        Debug.Log($"move car {player.transform.position} {rangeShowDistance}, {Time.timeScale}");
+        //Debug.Log($"move car {player.transform.position} {rangeShowDistance}, {Time.timeScale}");
         transform.DOMoveX(player.transform.position.x+ rangeShowDistance, moveTime).SetEase(Ease.Linear);
         yield return new WaitForSecondsRealtime(moveTime);
         if (StageLevelManager.Instance.isInHome)

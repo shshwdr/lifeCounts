@@ -1,0 +1,38 @@
+    You look uncomfortable. Do you need any help?	 
+    A human! Go away!	 
+    Hey, calm down! I'm a forest ranger, I want to help every life in this forest.	 
+    You are the new ranger? Great. This forest is not well maintained and I know a bunch of other animals suffer.	 
+    Just follow me, I'll lead you out of the forest and take care of you. I'll search and help others later too!	 
+    	 
+    I'm so hungry, all insects are poisoned in this forest and I have no food to eat!	 
+    Come with me! I'll get you some food! You can play with others in my place.	 
+    Thanks! There are others who need help, please help them too!	 
+    You look weak, are you ok?	 
+    For sure! I'll save every life as I can!	 
+    I can help you as I can fly. I can't lift you but am able to lift some other animals!	 
+    That would be helpful!	 
+    	 
+    Help me! Oink oink! I got stuck!	 
+    Sure! You seem to get hurt. Do you want to take a rest at my place and I can heal you?	 
+    That would be great. I can destroy rocks if you need.	 
+    	 
+    The forest is one fire! Help there are some animals in it!	 
+    Help there are some animals in it!	 
+    Let's go!	 
+    	 
+    I want to find some honey to eat. Do you know where can I find some?	 
+    This forest is getting barren. Come with me, I'll find some for you.	 
+    Thanks. I'm good at staying in the air, if you throw me to a direction, I can stay there no matter how heavy you are.	 
+    But you look so small!	 
+    Try me!	 
+    	 
+    This is my place. Enjoy yourself, I'll go find others. I'll get back soon.	 
+    	 
+    Help! We have a friend falling into the mud!	 
+    That's dangerous, let me help you!	 
+    You get heavy and dragged into the mud if you touch it. let's link together and try not to fall into the mud yourself!	 
+    	 
+    I can't stop jumping!	 
+    You look tired. I can try to find someone to help heal you.	 
+    Thanks! 	 
+ 

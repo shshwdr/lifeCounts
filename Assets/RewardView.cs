@@ -28,17 +28,6 @@ public class RewardView : BaseView
 
             StageLevelManager.Instance.unlockNextLevel();
         }
-        //StageLevelManager.Instance.addLevel();
-        var test = StageLevelManager.Instance.hasNextLevel() || !StageLevelManager.Instance.getMainTargetFinish();
-        if (test)
-        {
-            nextLevelButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            nextLevelButton.gameObject.SetActive(false);
-
-        }
         levelText.text = $"Level {StageLevelManager.Instance.currentLevel.displayName}";
         GameManager.Instance.saveAnimalInLevel();
         
@@ -60,7 +49,22 @@ public class RewardView : BaseView
             description.text = "Lifes are waiting for you to be saved!";
         }
 
-        if(StageLevelManager.Instance.currentLevelId == 0)
+
+        //StageLevelManager.Instance.addLevel();
+        var test = StageLevelManager.Instance.hasNextLevel() || !StageLevelManager.Instance.getMainTargetFinish();
+        if (test)
+        {
+            nextLevelButton.gameObject.SetActive(true);
+        }
+        else
+        {
+            nextLevelButton.gameObject.SetActive(false);
+
+            description.text = "Thanks for Playing!";
+
+        }
+
+        if (StageLevelManager.Instance.currentLevelId == 0)
         {
             nextLevelButton.gameObject.SetActive(false);
 

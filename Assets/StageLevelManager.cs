@@ -40,6 +40,39 @@ public class StageLevelManager : Singleton<StageLevelManager>
 
     Dictionary<string, int> levelToStarCount = new Dictionary<string, int>();
 
+    string[] hintText = new string[]
+    {
+        "A/D or Arrow Key to move left and right\nSpace / W / Up  To Jump",
+        "Press R to Restart\nJump On Animals to reach higher place",
+        "Left Mouse To Drag Bird\nHe can lift other animals up",
+        "Order Of Animals Link Can Be Important",
+        "If boar hit grey stone with certain speed, he would smash it!",
+        "Change direction while jumping up",
+        "Bird can drag you to move faster",
+        "Left click to shoot humming bird to the direction and pin\nLeft click again to unpin",
+        "Use Humming Bird To Give Boar A Speed To Destroy Stones",
+        "Pull It Out!\nIf it does not work, try to loosen the line a bit.",
+        "Order is important",
+        "Rabbit wont stop jump\nIt might be a curse.. But can be helpful sometimes",
+        "Use everything you've learned and save every life!",
+
+
+    };
+
+    public string currentText()
+    {
+        if (currentLevelId < 0)
+        {
+
+            return hintText[0];
+        }
+        if(currentLevelId>= hintText.Length)
+        {
+            return "";
+        }
+        return hintText[currentLevelId];
+    }
+
     public int starCountInLevel(string sceneName)
     {
         if (!levelToStarCount.ContainsKey(sceneName))
