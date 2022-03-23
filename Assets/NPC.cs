@@ -17,6 +17,9 @@ public class NPC : MonoBehaviour
     public float triggerAbilityTime = 5f;
     public float triggerAbilityTimer = 0;
     bool state = false;
+
+    public GameObject soulBond;
+    public GameObject targetSphere;
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -142,6 +145,11 @@ public class NPC : MonoBehaviour
         if (collision.GetComponent<CharacterController2D>())
         {
             link();
+
+            soulBond.transform.parent = transform.parent;
+            soulBond.SetActive(true);
+            targetSphere.transform.parent = collision. transform;
+            targetSphere.transform.localPosition = Vector3.zero;
             if (GameManager.Instance.linkType == LinkType.distance)
             {
                 GetComponent<AnchoredJoint2D>().enabled = true;

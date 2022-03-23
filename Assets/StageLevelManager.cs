@@ -42,19 +42,19 @@ public class StageLevelManager : Singleton<StageLevelManager>
 
     string[] hintText = new string[]
     {
-        "A/D or Arrow Key to move left and right\nSpace / W / Up  To Jump",
-        "Press R to Restart\nJump On Animals to reach higher place",
-        "Left Mouse To Drag Bird\nHe can lift other animals up",
-        "Order Of Animals Link Can Be Important",
-        "If boar hit grey stone with certain speed, he would smash it!",
-        "Change direction while jumping up",
-        "Bird can drag you to move faster",
-        "Left click to shoot humming bird to the direction and pin\nLeft click again to unpin",
-        "Use Humming Bird To Give Boar A Speed To Destroy Stones",
-        "Pull It Out!\nIf it does not work, try to loosen the line a bit.",
-        "Order is important",
-        "Rabbit wont stop jump\nIt might be a curse.. But can be helpful sometimes",
-        "Use everything you've learned and save every life!",
+        "A / D or Arrow Keys to move left and right\n.Space / W / Up  To Jump.",
+"Press R to Restart.\nJump on animals to reach higher places.",
+"Left Mouse to drag Bird.\nHe can lift other animals.",
+"The order of animals linked can be important",
+"If Boar hits the broken stone with enough speed, he will smash it!",
+"You can change direction in midair.",
+"Bird can drag you to move faster.",
+"Left Click to shoot Hummingbird in the mouse direction.\nLeft Click to pin and unpin.",
+"Use Hummingbird to give Boar the speed to destroy stones.",
+"Pull It Out!\nIf it does not work, try to loosen the line a bit.",
+"Order is important.",
+"Rabbit won't stop jumping.\nIt might be a curse... but can be helpful sometimes.",
+"Use everything you've learned and save every life!",
 
 
     };
