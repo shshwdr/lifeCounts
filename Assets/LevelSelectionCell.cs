@@ -13,6 +13,7 @@ public class LevelSelectionCell : MonoBehaviour
         text.text = info.displayName;
         button.onClick.AddListener(delegate
         {
+            
             StageLevelManager.Instance.startLevel(info.id);
 
 

@@ -222,8 +222,18 @@ public class StageLevelManager : Singleton<StageLevelManager>
     {
         currentLevelId = id;
         //startNextLevel();
-        finishLevel();
+        if (isInHome)
+        {
+
+            finishLevel();
+        }
+        else
+        {
+            startNextLevel();
+        }
     }
+
+
 
     public void startNextLevel()
     {
@@ -258,10 +268,10 @@ public class StageLevelManager : Singleton<StageLevelManager>
         countDownTimer = 0;
         SceneManager.LoadScene(currentLevel.sceneName);
     }
-    protected void Awake()
+   
+    // Start is called before the first frame update
+    void Start()
     {
-        //base.Awake();
-        //audioSource = GetComponent<AudioSource>();
         levelInfoList = CsvUtil.LoadObjects<LevelInfo>("Level");
         int id = 0;
         foreach (var info in levelInfoList)
@@ -273,11 +283,6 @@ public class StageLevelManager : Singleton<StageLevelManager>
             info.id = id++;
             levelInfoByName[info.displayName] = info;
         }
-
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
         startNextLevel();
     }
 
