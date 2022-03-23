@@ -200,86 +200,11 @@ MonoBehaviour:
       isGroup: 0
       nodeColor: 
       delaySimStatus: 0
-      falseConditionAction: 
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 2
-        originDialogueID: 0
-        destinationConversationID: 2
-        destinationDialogueID: 1
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 20
-        y: 30
-        width: 160
-        height: 30
-    - id: 1
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Description
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Actor
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Dialogue Text
-        value: You look uncomfortable. Do you need any help?
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: canvasRect
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Video File
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      conversationID: 2
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
       - originConversationID: 2
-        originDialogueID: 1
+        originDialogueID: 0
         destinationConversationID: 2
         destinationDialogueID: 3
         isConnector: 0
@@ -292,7 +217,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 20
-        y: 80
+        y: 30
         width: 160
         height: 30
     - id: 3
@@ -393,8 +318,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Hey calm down! I'm a forest ranger, I want to help every life in this
-          forest.
+        value: Hey, calm down! I'm the new forest ranger. Are you hurt? Do you need
+          any help?
         type: 0
         typeString: 
       - title: Sequence
@@ -469,8 +394,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: You are the new ranger? Great. This forest is not well maintained
-          and I know bunch of other animals in suffer.
+        value: You are the ranger? Where have you been? Something has happened in
+          this forest. A lot of the animals are suffering.
         type: 0
         typeString: 
       - title: Sequence
@@ -545,8 +470,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Just follow me, I'll lead you out of the forest and take care of you.
-          I'll search and help other later too!
+        value: I've no time to explain, I'm here to help. Just follow me, I'll lead
+          you and other animals out of the forest and take care of you. ALL of you.
         type: 0
         typeString: 
       - title: Sequence
@@ -741,8 +666,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: I'm so hungry, all insects are poisoned in this forest and I have
-          no food to eat!
+        value: "No, all the insects are poisoned and I have no food to eat! I'm so
+          hungry!\r"
         type: 0
         typeString: 
       - title: Sequence
@@ -817,8 +742,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Come with me! I'll get you some food! You can play with others in
-          my place.
+        value: "Wolf and I will scout for food and bring some to you.\r"
         type: 0
         typeString: 
       - title: Sequence
@@ -893,7 +817,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Thanks! There are others need help, please help them too!
+        value: "Thanks! There are others who need help, please help them too! I can
+          fly, but hunger has made me weak. I can't lift you but am able to lift
+          some other animals.\r"
         type: 0
         typeString: 
       - title: Sequence
@@ -1043,158 +969,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: For sure! I'll save every life as I can!
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      - title: canvasRect
-        value: 
-        type: 0
-        typeString: 
-      - title: Pictures
-        value: 
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: 
-      - title: Audio Files
-        value: 
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Video File
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 3
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 3
-        originDialogueID: 5
-        destinationConversationID: 3
-        destinationDialogueID: 6
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 26.907219
-        y: 269.48453
-        width: 160
-        height: 30
-    - id: 6
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: I can help you as I can fly. I can't lift you but am able to lift
-          some other animals!
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      - title: canvasRect
-        value: 
-        type: 0
-        typeString: 
-      - title: Pictures
-        value: 
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: 
-      - title: Audio Files
-        value: 
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Video File
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 3
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 3
-        originDialogueID: 6
-        destinationConversationID: 3
-        destinationDialogueID: 7
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 26.907219
-        y: 319.48453
-        width: 160
-        height: 30
-    - id: 7
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: That would be helpful!
+        value: "For sure! I'll save every life as I can!\r"
         type: 0
         typeString: 
       - title: Sequence
@@ -1237,7 +1012,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 26.907219
-        y: 369.48453
+        y: 269.48453
         width: 160
         height: 30
     entryGroups: []
@@ -1389,7 +1164,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Help me! Oink oink! I got stuck!
+        value: "Help me! Oink oink! I got stuck!\r"
         type: 0
         typeString: 
       - title: Sequence
@@ -1464,8 +1239,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Sure! You seems get hurt. Do you want to take a rest at my place and
-          I can heal you?
+        value: "Don't worry, there are enough of us here to pull you out. Do you
+          want to take a rest at my place and I can heal you?\r"
         type: 0
         typeString: 
       - title: Sequence
@@ -1540,7 +1315,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: That would be great. I can destroy rocks if you need.
+        value: "That would be great. I can destroy rocks if I've enough speed. We
+          need to escape this place.\r"
         type: 0
         typeString: 
       - title: Sequence
@@ -1735,7 +1511,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: The forest is one fire! Help there are some animals in it!
+        value: The forest is one fire! Help! there are lots of animals here!
         type: 0
         typeString: 
       - title: Sequence
@@ -1785,81 +1561,6 @@ MonoBehaviour:
         serializedVersion: 2
         x: 30
         y: 70
-        width: 160
-        height: 30
-    - id: 2
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: Help there are some animals in it!
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      - title: canvasRect
-        value: 
-        type: 0
-        typeString: 
-      - title: Pictures
-        value: 
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: 
-      - title: Audio Files
-        value: 
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Video File
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 5
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 5
-        originDialogueID: 2
-        destinationConversationID: 5
-        destinationDialogueID: 3
-        isConnector: 1
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 246
-        y: 126
         width: 160
         height: 30
     - id: 3
@@ -2080,7 +1781,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: I want to find some honey to eat. Do you know where can I find some?
+        value: I want to find some honey to eat but I can't.
         type: 0
         typeString: 
       - title: Sequence
@@ -2230,7 +1931,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Thanks. I'm good at stay in the air, if you shoot me to a direction,
+        value: Thanks. I'm good at staying in the air, if you shoot me in a direction,
           I can stay there no matter how heavy you are.
         type: 0
         typeString: 
@@ -2306,7 +2007,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: But you look so small!
+        value: Really? You look so small!
         type: 0
         typeString: 
       - title: Sequence
@@ -2429,7 +2130,7 @@ MonoBehaviour:
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.9100001
+    canvasZoom: 0.85000014
   - id: 7
     fields:
     - title: Title
@@ -2772,7 +2473,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Help! We have a friend falling into a mud!
+        value: Help! We have a friend falling into the mud!
         type: 0
         typeString: 
       - title: Sequence
@@ -2922,8 +2623,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: You get heavy and dragged into the mud if you touch it. let's link
-          together and try not fall into the mud yourself!
+        value: You get heavy and dragged into the mud if you get into it. let's link
+          together and try not to fall into the mud yourself!
         type: 0
         typeString: 
       - title: Sequence
@@ -3268,7 +2969,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'Thanks! '
+        value: Please!
         type: 0
         typeString: 
       - title: Sequence

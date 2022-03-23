@@ -163,7 +163,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 3e855d27f0690a84e978fc8f8a4a5134, type: 3}
   - {fileID: 8300000, guid: ee3c7f9a89518454fa922cb27d048901, type: 3}
   - {fileID: 8300000, guid: c9a171d077af99f4d9005dcb9f4bb5a1, type: 3}
-  jumpClip: {fileID: 8300000, guid: 1357671d642a7594ab8cc61a8573df7b, type: 3}
+  jumpClips: []
+  dialogueClip: {fileID: 8300000, guid: e57bdecbdaacfba49885672b9d99b2b8, type: 3}
   OnCrouchEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -469,6 +470,62 @@ PrefabInstance:
     - target: {fileID: 22487592, guid: bee64addd10318640aec5e7713ee9ba7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114785316006335746, guid: bee64addd10318640aec5e7713ee9ba7, type: 3}
+      propertyPath: onEnd.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114785316006335746, guid: bee64addd10318640aec5e7713ee9ba7, type: 3}
+      propertyPath: onBegin.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114785316006335746, guid: bee64addd10318640aec5e7713ee9ba7, type: 3}
+      propertyPath: onEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114785316006335746, guid: bee64addd10318640aec5e7713ee9ba7, type: 3}
+      propertyPath: onBegin.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114785316006335746, guid: bee64addd10318640aec5e7713ee9ba7, type: 3}
+      propertyPath: onEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4192571625674442364}
+    - target: {fileID: 114785316006335746, guid: bee64addd10318640aec5e7713ee9ba7, type: 3}
+      propertyPath: onBegin.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4192571625674442364}
+    - target: {fileID: 114785316006335746, guid: bee64addd10318640aec5e7713ee9ba7, type: 3}
+      propertyPath: onEnd.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114785316006335746, guid: bee64addd10318640aec5e7713ee9ba7, type: 3}
+      propertyPath: onEnd.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: playDialogueSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 114785316006335746, guid: bee64addd10318640aec5e7713ee9ba7, type: 3}
+      propertyPath: onBegin.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114785316006335746, guid: bee64addd10318640aec5e7713ee9ba7, type: 3}
+      propertyPath: onBegin.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: playDialogueSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 114785316006335746, guid: bee64addd10318640aec5e7713ee9ba7, type: 3}
+      propertyPath: onEnd.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CharacterController2D, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 114785316006335746, guid: bee64addd10318640aec5e7713ee9ba7, type: 3}
+      propertyPath: onBegin.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CharacterController2D, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 114785316006335746, guid: bee64addd10318640aec5e7713ee9ba7, type: 3}
+      propertyPath: onEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114785316006335746, guid: bee64addd10318640aec5e7713ee9ba7, type: 3}
+      propertyPath: onBegin.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 224824400762711308, guid: bee64addd10318640aec5e7713ee9ba7, type: 3}
       propertyPath: m_AnchorMax.y

@@ -32,6 +32,7 @@ public class CharacterController2D : MonoBehaviour
 	AudioSource audioSource;
 	public AudioClip[] landClips;
 	public AudioClip[] jumpClips;
+	public AudioClip dialogueClip;
 
 	[System.Serializable]
 	public class BoolEvent : UnityEvent<bool> { }
@@ -267,10 +268,15 @@ public class CharacterController2D : MonoBehaviour
             if (jumpClips.Length>0)
             {
 
-				audioSource.PlayOneShot(jumpClips[Random.Range(0,jumpClips.Length)]);
+				audioSource.PlayOneShot(jumpClips[Random.Range(0,jumpClips.Length)],Random.Range(0.7f, 0.8f));
 			}
 		}
 	}
+
+	public void playDialogueSound()
+    {
+		audioSource.PlayOneShot(dialogueClip);
+    }
 
 
 	private void Flip()

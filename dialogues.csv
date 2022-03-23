@@ -32,49 +32,44 @@ Number,Text,Text,Actor,Actor,Files,JSON
 DialogueEntries
 entrytag,ConvID,ID,Actor,Conversant,Title,MenuText,DialogueText,IsGroup,FalseConditionAction,ConditionPriority,Conditions,Script,Sequence,Description,Pictures,Parenthetical,Audio Files,Video File,canvasRect
 Text,Number,Number,Number,Number,Text,Text,Text,Boolean,Special,Special,Text,Text,Text,Text,Files,Text,Files,Text,Text
-Player_2_0,2,0,1,2,START,,,False,,Normal,,,None(),,[],,[],,20;30
-Player_2_1,2,1,1,2,,,You look uncomfortable. Do you need any help?,False,Block,Normal,,,,,[],,[],,20;80
+Player_2_0,2,0,1,2,START,,,False,Block,Normal,,,None(),,[],,[],,20;30
 NPC_2_3,2,3,2,1,,,A human! Go away!,False,Block,Normal,,,,,,,,,256.5853;106.8293
-Player_2_4,2,4,1,2,,,"Hey calm down! I'm a forest ranger, I want to help every life in this forest.",False,Block,Normal,,,,,,,,,256.5853;156.8293
-NPC_2_5,2,5,2,1,,,You are the new ranger? Great. This forest is not well maintained and I know bunch of other animals in suffer.,False,Block,Normal,,,,,,,,,256.5853;206.8293
-Player_2_6,2,6,1,2,,,"Just follow me, I'll lead you out of the forest and take care of you. I'll search and help other later too!",False,Block,Normal,,,,,,,,,256.5853;256.8293
+Player_2_4,2,4,1,2,,,"Hey, calm down! I'm the new forest ranger. Are you hurt? Do you need any help?",False,Block,Normal,,,,,,,,,256.5853;156.8293
+NPC_2_5,2,5,2,1,,,You are the ranger? Where have you been? Something has happened in this forest. A lot of the animals are suffering.,False,Block,Normal,,,,,,,,,256.5853;206.8293
+Player_2_6,2,6,1,2,,,"I've no time to explain, I'm here to help. Just follow me, I'll lead you and other animals out of the forest and take care of you. ALL of you.",False,Block,Normal,,,,,,,,,256.5853;256.8293
 Player_3_0,3,0,1,2,START,,,False,Block,Normal,,,None(),,,,,,30;20
-NPC_3_1,3,1,2,1,,,"I'm so hungry, all insects are poisoned in this forest and I have no food to eat!",False,Block,Normal,,,,,,,,,28.96905;118.4536
-Player_3_2,3,2,1,2,,,Come with me! I'll get you some food! You can play with others in my place.,False,Block,Normal,,,,,,,,,25.84339;169.4845
-NPC_3_3,3,3,2,1,,,"Thanks! There are others need help, please help them too!",False,Block,Normal,,,,,,,,,26.90722;219.4845
+NPC_3_1,3,1,2,1,,,"No, all the insects are poisoned and I have no food to eat! I'm so hungry!\r",False,Block,Normal,,,,,,,,,28.96905;118.4536
+Player_3_2,3,2,1,2,,,Wolf and I will scout for food and bring some to you.\r,False,Block,Normal,,,,,,,,,25.84339;169.4845
+NPC_3_3,3,3,2,1,,,"Thanks! There are others who need help, please help them too! I can fly, but hunger has made me weak. I can't lift you but am able to lift some other animals.\r",False,Block,Normal,,,,,,,,,26.90722;219.4845
 Player_3_4,3,4,1,2,,,"You look weak, are you ok?",False,Block,Normal,,,,,,,,,155.7732;71.03093
-Player_3_5,3,5,1,2,,,For sure! I'll save every life as I can!,False,Block,Normal,,,,,,,,,26.90722;269.4845
-NPC_3_6,3,6,2,1,,,I can help you as I can fly. I can't lift you but am able to lift some other animals!,False,Block,Normal,,,,,,,,,26.90722;319.4845
-Player_3_7,3,7,1,2,,,That would be helpful!,False,Block,Normal,,,,,,,,,26.90722;369.4845
+Player_3_5,3,5,1,2,,,For sure! I'll save every life as I can!\r,False,Block,Normal,,,,,,,,,26.90722;269.4845
 Player_4_0,4,0,1,2,START,,,False,Block,Normal,,,None(),,,,,,30;20
-NPC_4_1,4,1,2,1,,,Help me! Oink oink! I got stuck!,False,Block,Normal,,,,,,,,,30;69
-Player_4_2,4,2,1,2,,,Sure! You seems get hurt. Do you want to take a rest at my place and I can heal you?,False,Block,Normal,,,,,,,,,30;120
-NPC_4_3,4,3,2,1,,,That would be great. I can destroy rocks if you need.,False,Block,Normal,,,,,,,,,30;170
+NPC_4_1,4,1,2,1,,,Help me! Oink oink! I got stuck!\r,False,Block,Normal,,,,,,,,,30;69
+Player_4_2,4,2,1,2,,,"Don't worry, there are enough of us here to pull you out. Do you want to take a rest at my place and I can heal you?\r",False,Block,Normal,,,,,,,,,30;120
+NPC_4_3,4,3,2,1,,,That would be great. I can destroy rocks if I've enough speed. We need to escape this place.\r,False,Block,Normal,,,,,,,,,30;170
 Player_5_0,5,0,1,2,START,,,False,,Normal,,,None(),,,,,,30;20
-NPC_5_1,5,1,2,1,,,The forest is one fire! Help there are some animals in it!,False,Block,Normal,,,,,,,,,30;70
-NPC_5_2,5,2,2,1,,,Help there are some animals in it!,False,Block,Normal,,,,,,,,,246;126
+NPC_5_1,5,1,2,1,,,The forest is one fire! Help! there are lots of animals here!,False,Block,Normal,,,,,,,,,30;70
 Player_5_3,5,3,1,2,,,Let's go!,False,Block,Normal,,,,,,,,,30;170
 Player_6_0,6,0,1,2,START,,,False,Block,Normal,,,None(),,,,,,30;20
-NPC_6_1,6,1,2,1,,,I want to find some honey to eat. Do you know where can I find some?,False,Block,Normal,,,,,,,,,30;70
+NPC_6_1,6,1,2,1,,,I want to find some honey to eat but I can't.,False,Block,Normal,,,,,,,,,30;70
 Player_6_2,6,2,1,2,,,"This forest is getting barren. Come with me, I'll find some for you.",False,Block,Normal,,,,,,,,,30;120
 NPC_6_3,6,3,2,1,,,"Thanks. I'm good at stay in the air, if you shoot me to a direction, I can stay there no matter how heavy you are.",False,Block,Normal,,,,,,,,,30;170
-Player_6_4,6,4,1,2,,,But you look so small!,False,Block,Normal,,,,,,,,,30;220
+Player_6_4,6,4,1,2,,,Really? You look so small!,False,Block,Normal,,,,,,,,,30;220
 NPC_6_5,6,5,2,1,,,Try me!,False,Block,Normal,,,,,,,,,30;270
 Player_7_0,7,0,1,2,START,,,False,Block,Normal,,,None(),,,,,,30;20
 Player_7_1,7,1,1,2,,,"This is my place. Enjoy yourself, I'll go find others. I'll get back soon.",False,Block,Normal,,,,,,,,,30;70
 Player_8_0,8,0,1,2,START,,,False,Block,Normal,,,None(),,,,,,30;20
 NPC_8_1,8,1,2,1,,,Help! We have a friend falling into a mud!,False,Block,Normal,,,,,,,,,29;70
 Player_8_2,8,2,1,2,,,"That's dangerous, let me help you!",False,Block,Normal,,,,,,,,,30;120
-NPC_8_3,8,3,2,1,,,You get heavy and dragged into the mud if you touch it. let's link together and try not fall into the mud yourself!,False,Block,Normal,,,,,,,,,30;170
+NPC_8_3,8,3,2,1,,,You get heavy and dragged into the mud if you get into it. let's link together and try not fall into the mud yourself!,False,Block,Normal,,,,,,,,,30;170
 Player_9_0,9,0,1,2,START,,,False,Block,Normal,,,None(),,,,,,30;20
 NPC_9_1,9,1,2,1,,,I can't stop jumping!,False,Block,Normal,,,,,,,,,30;70
 Player_9_2,9,2,1,2,,,You look tired. I can try to find someone to help heal you.,False,Block,Normal,,,,,,,,,30;120
-NPC_9_3,9,3,2,1,,,Thanks! ,False,Block,Normal,,,,,,,,,30;170
+NPC_9_3,9,3,2,1,,,Please!,False,Block,Normal,,,,,,,,,30;170
 OutgoingLinks
 OriginConvID,OriginID,DestConvID,DestID,ConditionPriority
 Number,Number,Number,Number,Special
-2,0,2,1,Normal
-2,1,2,3,Normal
+2,0,2,3,Normal
 2,3,2,4,Normal
 2,4,2,5,Normal
 2,5,2,6,Normal
@@ -83,14 +78,11 @@ Number,Number,Number,Number,Special
 3,2,3,3,Normal
 3,3,3,5,Normal
 3,4,3,1,Normal
-3,5,3,6,Normal
-3,6,3,7,Normal
 4,0,4,1,Normal
 4,1,4,2,Normal
 4,2,4,3,Normal
 5,0,5,1,Normal
 5,1,5,3,Normal
-5,2,5,3,Normal
 6,0,6,1,Normal
 6,1,6,2,Normal
 6,2,6,3,Normal
