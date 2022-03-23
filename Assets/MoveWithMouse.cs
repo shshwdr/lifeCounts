@@ -45,7 +45,11 @@ public class MoveWithMouse : MonoBehaviour
     }
     private void Update()
     {
+        if (!npc.isLinked)
+        {
+            return;
 
+        }
         if (Input.GetMouseButtonDown(0))
         {
             //Debug.Log("start flap");

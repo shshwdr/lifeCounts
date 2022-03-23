@@ -149,7 +149,7 @@ public class StageLevelManager : Singleton<StageLevelManager>
             var diff = currentLevel.targetCount - currentLevel.mainTargetCount;
             var expectDiff = (diff+1) / 2;
 
-            Debug.Log($"stars diff {diff}, expect {expectDiff}, compare {currentLevel.targetCount - rescuedCount}");
+            //Debug.Log($"stars diff {diff}, expect {expectDiff}, compare {currentLevel.targetCount - rescuedCount}");
             if(currentLevel.targetCount - rescuedCount<= expectDiff)
             {
                 showStarCount = 2;
@@ -258,7 +258,7 @@ public class StageLevelManager : Singleton<StageLevelManager>
         countDownTimer = 0;
         SceneManager.LoadScene(currentLevel.sceneName);
     }
-    protected  void Awake()
+    protected void Awake()
     {
         //base.Awake();
         //audioSource = GetComponent<AudioSource>();
