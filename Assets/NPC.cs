@@ -147,6 +147,7 @@ public class NPC : MonoBehaviour
             link();
 
             soulBond.transform.parent = transform.parent;
+            soulBond.transform.localScale = Vector3.one;
             soulBond.SetActive(true);
             targetSphere.transform.parent = collision. transform;
             targetSphere.transform.localPosition = Vector3.zero;
