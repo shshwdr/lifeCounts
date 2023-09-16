@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
             isJump = true;
         }
 
-        if(Mathf.Abs(rb.velocity.x) > 0.1f)
+        if(Mathf.Abs(rb.velocity.x) > 0.5f)
         {
             GetComponent<Animator>().SetTrigger("link");
         }
